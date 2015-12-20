@@ -1,4 +1,4 @@
-html, body, #container{
+html, body, #container, #content{
 	position: absolute;
 	margin: 0px;
 	font-family: Arial;
@@ -13,6 +13,7 @@ html, body, #container{
 }
 
 #header {
+	z-index: 1;
 	position: fixed;
 	height: 100px;
 	width: 100%;
@@ -50,5 +51,31 @@ html, body, #container{
 	color: black;
 }
 
+.service_button {
+	background-position: center;
+	margin-bottom: 10px;
+	padding-bottom: 5%;
+	background-repeat: no-repeat;
+}
+
+.service_button h1 {
+	text-align: center;
+	left: 50%;
+}
+
+.service_button:nth-child(2n+0) {
+	background-color: #fae556;
+}
+
+#services_buttons:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.service_button {
+	float: left;
+	width: 20%;
+}
 
 
