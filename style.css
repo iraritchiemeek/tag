@@ -89,10 +89,12 @@ html, body, #container, #content{
 }
 
 .service_section h1 {
+	margin-top: 0px;
 	font-family: 'Harriet';
 }
 
 .service_section {
+	margin: 0 0 0 0;
 	background-position: center;
 	padding-bottom: 10%;
 	background-repeat: no-repeat;

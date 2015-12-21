@@ -21,6 +21,5 @@ ServicesPage.prototype.serviceSection = function(serviceName, serviceInfo, image
 };
 
 ServicesPage.prototype.scrollTo = function(id) {
-	// console.log($('#'+ id + '_section')[0])
 	$.scrollTo($('#'+ id + '_section')[0], {duration: '1000', offset: -100})
 };
