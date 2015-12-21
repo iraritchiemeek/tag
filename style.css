@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'Harriet';
+	src: url('fonts/Harriet Display Regular.otf');
+}
+
 html, body, #container, #content{
 	position: absolute;
 	margin: 0px;
@@ -53,12 +58,17 @@ html, body, #container, #content{
 
 .service_button {
 	background-position: center;
-	margin-bottom: 10px;
 	padding-bottom: 5%;
 	background-repeat: no-repeat;
 }
 
+.service_button:hover {
+	text-decoration: underline;
+
+}
+
 .service_button h1 {
+	font-family: 'Harriet';
 	text-align: center;
 	left: 50%;
 }
@@ -78,12 +88,16 @@ html, body, #container, #content{
 	width: 20%;
 }
 
+.service_section h1 {
+	font-family: 'Harriet';
+}
+
 .service_section {
 	background-position: center;
 	padding-bottom: 10%;
 	background-repeat: no-repeat;
 }
 
-.service_section:nth-child(2n) {
+.service_section:nth-child(odd) {
 	background-color: #fae556;
 }
