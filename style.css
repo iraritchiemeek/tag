@@ -1,6 +1,11 @@
 @font-face {
-	font-family: 'Harriet';
+	font-family: 'Harriet Regular';
 	src: url('fonts/Harriet Display Regular.otf');
+}
+
+@font-face {
+	font-family: 'Harriet Medium';
+	src: url('fonts/Harriet Display Medium.otf');
 }
 
 html, body, #container, #content{
@@ -61,24 +66,23 @@ html, body, #container, #content{
 }
 
 .service_button {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid black;
 	background-position: center;
 	padding-bottom: 5%;
 	background-repeat: no-repeat;
 }
 
 .service_button:hover {
-	text-decoration: underline;
-
+	background-color: #fae556;
 }
 
 .service_button h1 {
-	font-family: 'Harriet';
+	font-family: 'Harriet Regular';
 	text-align: center;
 	left: 50%;
-}
-
-.service_button:nth-child(2n+0) {
-	background-color: #fae556;
 }
 
 #services_buttons:after {
@@ -93,14 +97,18 @@ html, body, #container, #content{
 }
 
 .service_section h1 {
+	text-align: center;
 	margin-top: 0px;
-	font-family: 'Harriet';
+	font-family: 'Harriet Medium';
 }
 
 .service_section p {
+	position: absolute;
+	left: 25%;
+	text-align: center;
+	font-family: 'Raleway',sans-serif; 
 	width: 50%;
 }
-
 
 
 .service_section {
