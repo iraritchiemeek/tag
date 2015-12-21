@@ -1,10 +1,5 @@
 @font-face {
-	font-family: 'Harriet Regular';
-	src: url('fonts/Harriet Display Regular.otf');
-}
-
-@font-face {
-	font-family: 'Harriet Medium';
+	font-family: 'Harriet';
 	src: url('fonts/Harriet Display Medium.otf');
 }
 
@@ -69,18 +64,20 @@ html, body, #container, #content{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid white;
 	background-position: center;
 	padding-bottom: 5%;
 	background-repeat: no-repeat;
-}
-
-.service_button:hover {
 	background-color: #fae556;
 }
 
+.service_button:hover {
+	background-color: white;
+}
+
 .service_button h1 {
-	font-family: 'Harriet Regular';
+	font-size: 24px;
+	font-family: 'Harriet';
 	text-align: center;
 	left: 50%;
 }
@@ -97,9 +94,11 @@ html, body, #container, #content{
 }
 
 .service_section h1 {
+	font-size: 25px;
 	text-align: center;
 	margin-top: 0px;
-	font-family: 'Harriet Medium';
+	padding-top: 10px;
+	font-family: 'Harriet';
 }
 
 .service_section p {
@@ -114,7 +113,7 @@ html, body, #container, #content{
 .service_section {
 	margin: 0 0 0 0;
 	background-position: center;
-	padding-bottom: 10%;
+	padding-bottom: 15%;
 	background-repeat: no-repeat;
 }
 
