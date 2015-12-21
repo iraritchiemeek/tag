@@ -78,4 +78,12 @@ html, body, #container, #content{
 	width: 20%;
 }
 
+.service_section {
+	background-position: center;
+	padding-bottom: 10%;
+	background-repeat: no-repeat;
+}
 
+.service_section:nth-child(2n) {
+	background-color: #fae556;
+}
