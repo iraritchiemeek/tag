@@ -23,3 +23,7 @@ ServicesPage.prototype.serviceSection = function(serviceName, serviceInfo, image
 ServicesPage.prototype.scrollTo = function(id) {
 	$.scrollTo($('#'+ id + '_section')[0], {duration: '1000', offset: -100})
 };
+
+ServicesPage.prototype.contact = function() {
+	$('#services_buttons').append('<div id="contact_button"><a href="mailto:someone@example.com?Subject=Get%20in%20Touch">Contact</a></div>')
+};

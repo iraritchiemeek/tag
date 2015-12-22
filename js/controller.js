@@ -21,6 +21,7 @@ $(document).ready(function(){
 	servicesPage.serviceItem("Activations", "One of the most fun parts of the job, the TAG team loves nothing more than taking a brand into the ‘real' world, combining the integration of social media and technology in the daily lives of consumers, leveraging it to inspire them to interact in a meaningful, real and honest way. Nothing beats content published and shared by a community, that's amplification, that's true social media.", "#")
 	servicesPage.serviceItem("Event Amplification", "The TAG team can help amplify your events, extend them beyond the walls of the event, pushing key content and experiences out into the world. The TAG team can live promote your event though social channels, working to have them trending your messages. From tweeting, on site video production through to live streaming through periscope, the TAG team has it covered.", "#")
 	servicesPage.serviceItem("Engagement points", "Inspire people to share your content doesn't just stay online! The team at TAG can work with you to develop unique engagement points within your physical and digital environments to inspire people to share your content, to inspire people to help you play the social game to win!", "#")
+	servicesPage.contact()
 	$(".service_button").on("click", function(e) {
 		servicesPage.scrollTo(e.currentTarget.id)
 	});
