@@ -25,4 +25,10 @@ $(document).ready(function(){
 	$(".service_button").on("click", function(e) {
 		servicesPage.scrollTo(e.currentTarget.id)
 	});
+
+	var homePage = new HomePage()
+	var url = '../vids/tag_30s.mp4'
+	homepage.setupSection('homepage_video')
+	homepage.setupSection('homepage_video')
+	homepage.setupSection('homepage_video')
 })

@@ -135,3 +135,13 @@ html, body, #container, #content{
 .service_section:nth-child(odd) {
 	background-color: #fae556;
 }
+
+.homepage_section {
+	height: 100%;
+	width: 100%;
+}
+
+.homepage_section:nth-child(odd) {
+	background-color: #fae556;
+}
+
