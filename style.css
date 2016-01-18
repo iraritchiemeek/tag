@@ -48,7 +48,7 @@ html, body, #container, #content{
 
 #header_menu a {
 	letter-spacing: 2px;
-	font-size: 13px;
+	font-size: 0.9vw;
 	font-family: 'Raleway',sans-serif;
 	font-weight: 700;
 	text-decoration: none;
@@ -141,7 +141,13 @@ html, body, #container, #content{
 	width: 100%;
 }
 
-.homepage_section:nth-child(odd) {
+.homepage_section:nth-child(even) {
 	background-color: #fae556;
 }
+
+#homepage_video video, #homepage_video {
+	height: 100%;
+	width: 100%;
+}
+
 
