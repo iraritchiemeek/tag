@@ -150,4 +150,8 @@ html, body, #container, #content{
 	width: 100%;
 }
 
-
+.homepage_2_grid {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
