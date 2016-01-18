@@ -141,11 +141,15 @@ html, body, #container, #content{
 	width: 100%;
 }
 
-.homepage_section:nth-child(even) {
+.homepage_section:nth-child(odd) {
 	background-color: #fae556;
 }
 
-#homepage_video video, #homepage_video {
+#homepage_video {
+	background-color: white !important;
+}
+
+#homepage_video video{
 	height: 100%;
 	width: 100%;
 }
@@ -154,4 +158,7 @@ html, body, #container, #content{
 	float: left;
 	width: 50%;
 	height: 100%;
+	background-size: 70%;
+	background-position: center;
+	background-repeat: no-repeat;
 }

@@ -18,7 +18,9 @@ $(document).ready(function(){
 		homePage.setupSection('homepage_video', '')
 		homePage.setupSection('tag_copy_section', 'homepage_double_grid')
 		homePage.homepageVideo(url)
-		homePage.setupGrid('tag_copy_section')
+
+		homePage.addGrid('tag_copy_section')
+		homePage.addImage('tag_copy_section', 'left', 'imgs/white_duck.gif')
 
 	}
 
