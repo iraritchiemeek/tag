@@ -15,12 +15,13 @@ $(document).ready(function(){
 
 	function loadHomepage () {
 		var url = 'vids/tag_30s.mp4'
-		homePage.setupSection('homepage_video', '')
+		homePage.setupSection('homepage_video')
 		homePage.setupSection('tag_copy_section', 'homepage_double_grid')
 		homePage.homepageVideo(url)
 
 		homePage.addGrid('tag_copy_section')
 		homePage.addImage('tag_copy_section', 'left', 'imgs/white_duck.gif')
+		homePage.addText('tag_copy_section', 'right', 'TAG - you\'re it!', 'We are a team of specialists in the game of social media. From #tags to brand tags, we play fair and we play to win. We\'re the kids you choose first to be on your team in the playground.')
 
 	}
 

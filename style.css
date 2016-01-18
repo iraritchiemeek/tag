@@ -162,3 +162,21 @@ html, body, #container, #content{
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+.homepage_text_section {
+	margin-top: 50%;
+}
+
+.copy_title {
+	font-size: 3.2vw;
+	font-family: 'Harriet';
+	width: 100%;
+}
+
+.homepage_copy {
+	text-align: left;
+	width: 60%;
+	font-size: 1.4vw;
+	font-family: 'Raleway',sans-serif; 
+}
+
