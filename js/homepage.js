@@ -19,10 +19,9 @@ HomePage.prototype.addImage = function(id, position, url) {
 };
 
 HomePage.prototype.addText = function(id, position, title, copy) {
-	$('#' + id + '_' + position).append('<div class="homepage_text_section"><div class="copy_title"><span>' + title + '</span></div><div class="homepage_copy"><span>' + copy + '</span></div></div>')
-	this.alignText(id, position)
+	$('#' + id + '_' + position).append('<div class="homepage_text_section"><div class="copy_title">' + title + '</div><div class="homepage_copy">' + copy + '</div></div>')
 };
 
-HomePage.prototype.alignText = function(id, position) {
-	console.log($('#' + id))
+HomePage.prototype.thinkDoReviewAccordian = function(title, position) {
+	$('#think_do_review_section_' + position).append('<div id="TDR_accordian"><div id="TDR_title">' + title + '</div><div class="TDR_toggle" id="think_toggle">Think</div><div class="TDR_toggle" id="do_toggle">Do</div><div class="TDR_toggle" id="review_toggle">Review</div></div>')
 };

@@ -18,6 +18,7 @@ $(document).ready(function(){
 		homePage.setupSection('tag_copy_section', 'homepage_double_grid')
 		homePage.setupSection('wanna_play_section', 'homepage_double_grid')
 		homePage.setupSection('our_approach_section', 'homepage_double_grid')
+		homePage.setupSection('think_do_review_section', 'homepage_double_grid')
 
 		var url = 'vids/tag_30s.mp4'
 		homePage.homepageVideo(url)
@@ -33,6 +34,10 @@ $(document).ready(function(){
 		homePage.addGrid('our_approach_section')
 		homePage.addImage('our_approach_section', 'left', 'imgs/white_motorbike.gif')
 		homePage.addText('our_approach_section', 'right', 'Our Approach', 'We don\'t automate, we activate! The social media world is a space that thrives on engagement and not automation; it\'s alive with content that connects people to brands, that moves people to take action, like, share and comment.')
+
+		homePage.addGrid('think_do_review_section')
+		homePage.addImage('think_do_review_section', 'right', 'imgs/yellow_boxing.gif')
+		homePage.thinkDoReviewAccordian('How we do what we do', 'left')
 
 	}
 

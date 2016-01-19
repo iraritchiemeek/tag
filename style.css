@@ -179,3 +179,23 @@ html, body, #container, #content{
 	font-family: 'Raleway',sans-serif; 
 }
 
+#TDR_accordian {	
+	text-align: left;
+	margin-left: 30%;
+	margin-top: 30%;
+}
+
+#TDR_title {
+	font-family: 'Harriet';
+	font-size: 3.2vw;
+}
+
+.TDR_toggle {
+	margin-top: 10%;
+	font-family: 'Raleway';
+	font-size: 2vw;
+}
+
+.TDR_toggle:hover {
+	font-style: italic;
+}
