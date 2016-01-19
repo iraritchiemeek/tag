@@ -133,7 +133,7 @@ html, body, #container, #content{
 }
 
 .service_section:nth-child(odd) {
-	background-color: #fae556;
+	background-color: #F0DE0F;
 }
 
 .homepage_section {
@@ -142,7 +142,7 @@ html, body, #container, #content{
 }
 
 .homepage_section:nth-child(odd) {
-	background-color: #fae556;
+	background-color: #F0DE0F;
 }
 
 #homepage_video {
@@ -174,8 +174,7 @@ html, body, #container, #content{
 }
 
 .homepage_copy {
-	text-align: left;
-	width: 60%;
+	width: 70%;
 	font-size: 1.4vw;
 	font-family: 'Raleway',sans-serif; 
 }

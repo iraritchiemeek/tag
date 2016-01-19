@@ -14,14 +14,25 @@ $(document).ready(function(){
 	}
 
 	function loadHomepage () {
-		var url = 'vids/tag_30s.mp4'
 		homePage.setupSection('homepage_video')
 		homePage.setupSection('tag_copy_section', 'homepage_double_grid')
+		homePage.setupSection('wanna_play_section', 'homepage_double_grid')
+		homePage.setupSection('our_approach_section', 'homepage_double_grid')
+
+		var url = 'vids/tag_30s.mp4'
 		homePage.homepageVideo(url)
 
 		homePage.addGrid('tag_copy_section')
 		homePage.addImage('tag_copy_section', 'left', 'imgs/white_duck.gif')
 		homePage.addText('tag_copy_section', 'right', 'TAG - you\'re it!', 'We are a team of specialists in the game of social media. From #tags to brand tags, we play fair and we play to win. We\'re the kids you choose first to be on your team in the playground.')
+
+		homePage.addGrid('wanna_play_section')
+		homePage.addImage('wanna_play_section', 'right', 'imgs/yellow_table.gif')
+		homePage.addText('wanna_play_section', 'left', 'Wanna play?', 'What we do - think, create, do, live, love and breathe social media.Sure, we can look after your social channels, post content daily and all of that, but where we thrive is in the innovation and creative games of social media. We push the boundaries, we create campaigns that excite, inspire and entertain.')
+
+		homePage.addGrid('our_approach_section')
+		homePage.addImage('our_approach_section', 'left', 'imgs/white_motorbike.gif')
+		homePage.addText('our_approach_section', 'right', 'Our Approach', 'We don\'t automate, we activate! The social media world is a space that thrives on engagement and not automation; it\'s alive with content that connects people to brands, that moves people to take action, like, share and comment.')
 
 	}
 

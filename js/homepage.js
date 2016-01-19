@@ -20,4 +20,9 @@ HomePage.prototype.addImage = function(id, position, url) {
 
 HomePage.prototype.addText = function(id, position, title, copy) {
 	$('#' + id + '_' + position).append('<div class="homepage_text_section"><div class="copy_title"><span>' + title + '</span></div><div class="homepage_copy"><span>' + copy + '</span></div></div>')
+	this.alignText(id, position)
+};
+
+HomePage.prototype.alignText = function(id, position) {
+	console.log($('#' + id))
 };
