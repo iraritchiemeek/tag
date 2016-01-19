@@ -25,3 +25,12 @@ HomePage.prototype.addText = function(id, position, title, copy) {
 HomePage.prototype.thinkDoReviewAccordian = function(title, position) {
 	$('#think_do_review_section_' + position).append('<div id="TDR_accordian"><div id="TDR_title">' + title + '</div><div class="TDR_toggle" id="think_toggle">Think</div><div class="TDR_toggle" id="do_toggle">Do</div><div class="TDR_toggle" id="review_toggle">Review</div></div>')
 };
+
+HomePage.prototype.addThinkDoReviewCopy = function(title, copy) {
+	$('#TDR_accordian').append('<div class="TDR_section" id="' + title + '_section">' + copy + '</div>')
+};
+
+HomePage.prototype.displayThinkDoReviewSection = function(section) {
+	$('.TDR_section').hide()
+	$('#' + section + '_section').show()
+};

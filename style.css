@@ -179,9 +179,9 @@ html, body, #container, #content{
 	font-family: 'Raleway',sans-serif; 
 }
 
-#TDR_accordian {	
+#TDR_accordian {
 	text-align: left;
-	margin-left: 30%;
+	margin-left: 20%;
 	margin-top: 30%;
 }
 
@@ -191,6 +191,7 @@ html, body, #container, #content{
 }
 
 .TDR_toggle {
+	width: 20%;
 	margin-top: 10%;
 	font-family: 'Raleway';
 	font-size: 2vw;
@@ -198,4 +199,15 @@ html, body, #container, #content{
 
 .TDR_toggle:hover {
 	font-style: italic;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+.TDR_section {
+	display: none;
+	font-family: 'Raleway';
+	position: absolute;
+	text-align: left;
+	left: 25%;
+	width: 25%;
 }

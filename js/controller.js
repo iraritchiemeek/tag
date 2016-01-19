@@ -38,7 +38,15 @@ $(document).ready(function(){
 		homePage.addGrid('think_do_review_section')
 		homePage.addImage('think_do_review_section', 'right', 'imgs/yellow_boxing.gif')
 		homePage.thinkDoReviewAccordian('How we do what we do', 'left')
-
+		homePage.addThinkDoReviewCopy('think', 'Research, planning and strategy development. Before you start the game you need to know who you\'re up against; their common plays, set moves - then build a strategy to beat them at their own game.')
+		homePage.addThinkDoReviewCopy('do', 'Strategy in social media is important, however it is important that the strategy can be flexible and dynamic. With a team of experts helping you to execute your game plan, we will work with you to develop engaging, creative content that works, is sustainable and is designed with your strategic goals in mind.')
+		homePage.addThinkDoReviewCopy('review', 'After every game there are ways to improve. Faster, stronger, better. At TAG we review everything, constantly looking at ways to improve on what we do and how we do it.')
+		
+		homePage.displayThinkDoReviewSection('think')
+		
+		$('.TDR_toggle').on('click', function(e) {
+			homePage.displayThinkDoReviewSection($(e.target)[0].innerHTML.toLowerCase())
+		})
 	}
 
 	function loadServicesPage () {
