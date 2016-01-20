@@ -20,6 +20,9 @@ $(document).ready(function(){
 		homePage.setupSection('our_approach_section', 'homepage_double_grid')
 		homePage.setupSection('think_do_review_section', 'homepage_double_grid')
 		homePage.setupSection('team_section', 'homepage_double_grid')
+		homePage.setupSection('trends_section', 'homepage_double_grid')
+
+		// homePage.homepageTitle()
 
 		var url = 'vids/tag_30s.mp4'
 		homePage.homepageVideo(url)
@@ -42,16 +45,19 @@ $(document).ready(function(){
 		homePage.addThinkDoReviewCopy('think', 'Research, planning and strategy development. Before you start the game you need to know who you\'re up against; their common plays, set moves - then build a strategy to beat them at their own game.')
 		homePage.addThinkDoReviewCopy('do', 'Strategy in social media is important, however it is important that the strategy can be flexible and dynamic. With a team of experts helping you to execute your game plan, we will work with you to develop engaging, creative content that works, is sustainable and is designed with your strategic goals in mind.')
 		homePage.addThinkDoReviewCopy('review', 'After every game there are ways to improve. Faster, stronger, better. At TAG we review everything, constantly looking at ways to improve on what we do and how we do it.')
-		homePage.displayThinkDoReviewSection('think')
+		homePage.displayThinkDoReviewSection('review')
+		homePage.autoChangeTDR()
 		$('.TDR_toggle').on('click', function(e) {
-			homePage.displayThinkDoReviewSection($(e.target)[0].innerHTML.toLowerCase())
-			$('.TDR_toggle').removeClass('active_TDR')
-			$(e.target).addClass('active_TDR')
+			homePage.displayThinkDoReviewSection($(e.target)[0].innerHTML.toLowerCase())			
 		})
 
 		homePage.addGrid('team_section')
 		homePage.addImage('team_section', 'left', 'imgs/team.png')
 		homePage.addText('team_section', 'right', 'The Team', 'The team at TAG is made up of a unique combination of talented individuals, each bringing depth and experience to the social media industry.')
+
+		homePage.addGrid('trends_section')
+		homePage.addImage('trends_section', 'right', 'imgs/yellow_carousel.gif')
+		homePage.addText('trends_section', 'left', 'Trends', 'The world of social media is fast becoming video based and at TAG we love to create videos designed for the social media space!<br><br>This page brings you the latest trending videos from around the world, automatically pulling the top trending clips from Vine, YouTube and Reddit, we hope you enjoy!')
 
 
 	}
