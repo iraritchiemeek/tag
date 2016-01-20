@@ -11,7 +11,7 @@ HomePage.prototype.setupSection = function(id, additional_class) {
 };
 
 HomePage.prototype.addGrid = function(id) {
-	$('#' + id).append('<div class="homepage_2_grid" id="' + id + '_left"></div><div class="homepage_2_grid" id="' + id + '_right"</div>')
+	$('#' + id).append('<div class="homepage_2_grid left_section" id="' + id + '_left"></div><div class="homepage_2_grid right_section" id="' + id + '_right"</div>')
 };
 
 HomePage.prototype.addImage = function(id, position, url) {

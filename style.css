@@ -150,7 +150,7 @@ html, body, #container, #content{
 }
 
 #homepage_video video{
-	height: 100%;
+	height: calc(100% - 100px);
 	width: 100%;
 }
 
@@ -191,6 +191,7 @@ html, body, #container, #content{
 }
 
 .TDR_toggle {
+	margin-right: 30px;
 	display: inline-block;
 	color: #696969;
 	font-family: 'Raleway';
@@ -218,4 +219,9 @@ html, body, #container, #content{
 
 #team_section_left {
 	background-size: 110% !important;
+}
+
+.left_section .homepage_text_section .homepage_copy, .left_section .homepage_text_section .copy_title {
+	float: right;
+	text-align: right;
 }
