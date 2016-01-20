@@ -43,9 +43,11 @@ $(document).ready(function(){
 		homePage.addThinkDoReviewCopy('review', 'After every game there are ways to improve. Faster, stronger, better. At TAG we review everything, constantly looking at ways to improve on what we do and how we do it.')
 		
 		homePage.displayThinkDoReviewSection('think')
-		
+
 		$('.TDR_toggle').on('click', function(e) {
 			homePage.displayThinkDoReviewSection($(e.target)[0].innerHTML.toLowerCase())
+			$('.TDR_toggle').removeClass('active_TDR')
+			$(e.target).addClass('active_TDR')
 		})
 	}
 
