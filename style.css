@@ -182,7 +182,7 @@ html, body, #container, #content{
 #TDR_accordian {
 	text-align: left;
 	margin-left: 20%;
-	margin-top: 30%;
+	margin-top: 35%;
 }
 
 #TDR_title {
@@ -193,7 +193,6 @@ html, body, #container, #content{
 .TDR_toggle {
 	display: inline-block;
 	color: #696969;
-	margin-top: 10%;
 	font-family: 'Raleway';
 	font-size: 2vw;
 }
@@ -206,7 +205,6 @@ html, body, #container, #content{
 
 .active_TDR {
 	color: black;
-	font-weight: bold;
 }
 
 .TDR_section {
@@ -216,4 +214,8 @@ html, body, #container, #content{
 	position: absolute;
 	text-align: left;
 	width: 25%;
+}
+
+#team_section_left {
+	background-size: 110% !important;
 }
