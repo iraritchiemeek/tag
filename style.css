@@ -76,6 +76,8 @@ html, body, #container, #content{
 	text-decoration: none;
 }
 
+/* -----------------------HOME PAGE---------------------------- */
+
 .homepage_section {
 	height: calc(100% - 100px);
 	width: 100%;
@@ -164,4 +166,17 @@ html, body, #container, #content{
 .left_section .homepage_text_section .homepage_copy, .left_section .homepage_text_section .copy_title {
 	float: right;
 	text-align: right;
+}
+
+/*------------------------HOME PAGE ENDS-----------------------------*/
+
+/*------------------------SERVICES PAGE------------------------------*/
+
+.services_section {
+	height: calc(100% - 100px);
+	width: 100%;
+}
+
+.services_section:nth-child(even) {
+	background-color: #F0DE0F;
 }
