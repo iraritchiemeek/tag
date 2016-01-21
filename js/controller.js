@@ -69,7 +69,7 @@ $(document).ready(function(){
 	}
 
 	function loadServicesPage () {
-		console.log('LOADING')
+		$('#content').empty()
 	}
 
 
