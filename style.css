@@ -34,7 +34,7 @@ html, body, #container, #content{
 	background-size: 150%;
 	position: fixed;
 	left: 3%;
-	background-image: url('imgs/yellow_tag_logo.png');
+	background-image: url('imgs/TAG_logo_tag_black_blacktag.png');
 }
 
 #header_menu {
@@ -56,7 +56,7 @@ html, body, #container, #content{
 	word-wrap: normal;
 }
 
-#header_menu a:visited {
+#header_menu a:visited, #header_menu a:link {
 	color: black;
 }
 
@@ -133,19 +133,23 @@ html, body, #container, #content{
 }
 
 .service_section:nth-child(odd) {
-	background-color: #fae556;
+	background-color: #F0DE0F;
 }
 
 .homepage_section {
-	height: 100%;
+	height: calc(100% - 100px);
 	width: 100%;
 }
 
-.homepage_section:nth-child(even) {
-	background-color: #fae556;
+.homepage_section:nth-child(odd) {
+	background-color: #F0DE0F;
 }
 
-#homepage_video video, #homepage_video {
+#homepage_video {
+	background-color: white !important;
+}
+
+#homepage_video video{
 	height: 100%;
 	width: 100%;
 }
@@ -154,4 +158,70 @@ html, body, #container, #content{
 	float: left;
 	width: 50%;
 	height: 100%;
+	background-size: 70%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.homepage_text_section {
+	margin-top: 50%;
+}
+
+.copy_title {
+	font-size: 3.2vw;
+	font-family: 'Harriet';
+	width: 100%;
+}
+
+.homepage_copy {
+	width: 70%;
+	font-size: 1.4vw;
+	font-family: 'Raleway',sans-serif; 
+}
+
+#TDR_accordian {
+	text-align: left;
+	margin-left: 20%;
+	margin-top: 50%;
+}
+
+#TDR_title {
+	font-family: 'Harriet';
+	font-size: 3.2vw;
+}
+
+.TDR_toggle {
+	margin-right: 30px;
+	display: inline-block;
+	color: #696969;
+	font-family: 'Raleway';
+	font-size: 2vw;
+}
+
+.TDR_toggle:hover {
+	color: black;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+.active_TDR {
+	color: black;
+}
+
+.TDR_section {
+	font-size: 1.3vw;
+	display: none;
+	font-family: 'Raleway';
+	position: absolute;
+	text-align: left;
+	width: 25%;
+}
+
+#team_section_left {
+	background-size: 110% !important;
+}
+
+.left_section .homepage_text_section .homepage_copy, .left_section .homepage_text_section .copy_title {
+	float: right;
+	text-align: right;
 }
