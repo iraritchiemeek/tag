@@ -4,8 +4,17 @@ $(document).ready(function(){
 	var servicesPage = new ServicesPage()
 
 	loadPageConstants()
-	loadHomepage()
 	eventListeners()
+	checkPageHash()
+
+	function checkPageHash () {
+		var page = window.location.hash
+		if (page === '#services') {
+			loadServicesPage()
+		} else {
+			loadHomepage()
+		}
+	}
 
 	function loadPageConstants () {
 		var headerMenu = new HeaderMenu()
@@ -64,12 +73,11 @@ $(document).ready(function(){
 		homePage.addGrid('trends_section')
 		homePage.addImage('trends_section', 'right', 'imgs/yellow_carousel.gif')
 		homePage.addText('trends_section', 'left', 'Trends', 'The world of social media is fast becoming video based and at TAG we love to create videos designed for the social media space!<br><br>This page brings you the latest trending videos from around the world, automatically pulling the top trending clips from Vine, YouTube and Reddit, we hope you enjoy!')
-
-
 	}
 
 	function loadServicesPage () {
 		$('#content').empty()
+		window.location.hash = 'services';
 	}
 
 
