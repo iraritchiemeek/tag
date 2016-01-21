@@ -57,6 +57,7 @@ HomePage.prototype.autoChangeTDR = function() {
 		} else {
 			console.log(index)
 			index = 0
+			self.displayThinkDoReviewSection(TDR[0])
 		}
 	}, 10000)
 };
