@@ -12,7 +12,7 @@ $(document).ready(function(){
 		if (page === '#services') {
 			loadServicesPage()
 		} else {
-			loadHomepage()
+			loadHomePage()
 		}
 	}
 
@@ -28,9 +28,17 @@ $(document).ready(function(){
 			e.preventDefault()
 			loadServicesPage()
 		})
+
+		$('#HOME_menu_item').on('click', function (e) {
+			e.preventDefault()
+			loadHomePage()
+		})
 	}
 
-	function loadHomepage () {
+	function loadHomePage () {
+		$('#content').empty()
+		window.location.hash = '';
+
 		homePage.setupSection('homepage_video')
 		homePage.setupSection('tag_copy_section', 'homepage_double_grid')
 		homePage.setupSection('wanna_play_section', 'homepage_double_grid')
@@ -78,6 +86,12 @@ $(document).ready(function(){
 	function loadServicesPage () {
 		$('#content').empty()
 		window.location.hash = 'services';
+		servicesPage.setupSection('services_carousel')
+		servicesPage.servicesButtonsWrapper('services_carousel')
+		servicesPage.servicesToggleButton('services_carousel', 'research')
+		servicesPage.servicesToggleButton('services_carousel', 'strategy')
+		servicesPage.servicesToggleButton('services_carousel', 'campaigns_creative')
+		servicesPage.servicesToggleButton('services_carousel', 'video')
 	}
 
 
