@@ -19,7 +19,7 @@ HomePage.prototype.addGrid = function(id) {
 };
 
 HomePage.prototype.addImage = function(id, position, url) {
-	$('#' + id + '_' + position).css({'backgroundImage' : 'url('+ url + ')'})
+	$('#' + id + '_' + position).css({'backgroundImage' : 'url(' + url + ')'}).fadeIn()
 };
 
 HomePage.prototype.addText = function(id, position, title, copy) {

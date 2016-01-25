@@ -13,8 +13,14 @@ ServicesPage.prototype.servicesToggleButton = function(target, id) {
 	$('#services_buttons_wrapper').append('<div id="' + id + '_services_button" class="services_toggle_buttons"></div>')
 };
 
+ServicesPage.prototype.refreshServiceSections = function() {
+	$('.left_section, .right_section').empty()
+	$('.left_section, .right_section').css({'backgroundImage':'none'})
+};
+
 ServicesPage.prototype.autoChangeServices = function(nested_services_array, HomePage) {
 	var index = -1
+	var self = this
 	window.setInterval(function(){
 		var max_index = nested_services_array.length
 		if (index >= max_index - 1) {
@@ -29,11 +35,11 @@ ServicesPage.prototype.autoChangeServices = function(nested_services_array, Home
 			var image = nested_services_array[index][1][2]
 			var title = nested_services_array[index][0][2]
 			var text = nested_services_array[index][0][3]
-			$('#' + target).empty()
+			self.refreshServiceSections()
 			HomePage.addGrid(target)
 			HomePage.addImage(target, image_position, image)
 			HomePage.addText(target, text_position, title, text)
 
 		};
-	}, 5000)
+	}, 2000)
 };

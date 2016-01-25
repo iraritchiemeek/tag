@@ -93,9 +93,9 @@ $(document).ready(function(){
 		servicesPage.servicesToggleButton('services_carousel', 'campaigns_creative')
 		servicesPage.servicesToggleButton('services_carousel', 'video')
 
-		// homePage.addGrid('services_carousel')
-		// homePage.addImage('services_carousel', 'left', 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383')
-		// homePage.addText('services_carousel', 'right', 'Research', 'We watch to see what the competition is doing; researching the competitive playing field that is your marker and equipping you and your team with the information and knowledge you need. If you\'re new to social media or already up and running, knowledge is power, power to win!')
+		homePage.addGrid('services_carousel')
+		homePage.addImage('services_carousel', 'left', 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383')
+		homePage.addText('services_carousel', 'right', 'Research', 'We watch to see what the competition is doing; researching the competitive playing field that is your marker and equipping you and your team with the information and knowledge you need. If you\'re new to social media or already up and running, knowledge is power, power to win!')
 	
 		var target = 'services_carousel'
 
@@ -105,8 +105,9 @@ $(document).ready(function(){
 		var strategy_text = [target, 'left', 'Strategy', 'Developing a plan to win, not just for the first game, but also for future games. No professional game is won without a strong, tested and well thought out strategy. <br/> At TAG we have a diverse team of experts in the social media space, with deep understanding of branding, strategy and how to pull it all together through creative processes and social innovation. Beyond just marketing, we will dive into the depths of your brands culture, inspiring and invigorating your team.']
 		var strategy_image = [target, 'right', 'http://blogs-images.forbes.com/clareoconnor/files/2015/03/iwatch_retailers_retale-e1426179110683.png']
 		
-		// var campaign_creative_text = [target. 'right', 'Campaigns and Creative', ]
-		servicesPage.autoChangeServices([[research_text, research_image], [strategy_text, strategy_image]], homePage)
+		var videos_text = [target, 'right', 'Video Production', 'Video and social media go together like marmite and cheese in a school lunch box. Naturally, TAG has the ability to shoot, direct and produce video content for social media channels, weather it’s on our own in house green screen or somewhere in the field!</br>The only limit is your imagination!']
+		var videos_image = [target, 'left', 'http://www.officialpsds.com/images/thumbs/Canon-Camera-with-Color-Lense-psd75638.png']
+		servicesPage.autoChangeServices([[research_text, research_image], [strategy_text, strategy_image], [videos_text, videos_image]], homePage)
 	}
 
 
