@@ -14,8 +14,8 @@ ServicesPage.prototype.servicesToggleButton = function(target, id) {
 };
 
 ServicesPage.prototype.refreshServiceSections = function() {
-	$('.left_section, .right_section').empty()
-	$('.left_section, .right_section').css({'backgroundImage':'none'})
+	$('.left_section, .right_section').remove()
+	// $('.left_section, .right_section').css({'backgroundImage':'none'})
 };
 
 ServicesPage.prototype.autoChangeServices = function(nested_services_array, HomePage) {
