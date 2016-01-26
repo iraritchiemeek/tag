@@ -19,7 +19,7 @@ HomePage.prototype.addGrid = function(id) {
 };
 
 HomePage.prototype.addImage = function(id, position, url) {
-	$('#' + id + '_' + position).css({'backgroundImage' : 'url('+ url + ')'})
+	$('#' + id + '_' + position).css({'backgroundImage' : 'url(' + url + ')'}).fadeIn()
 };
 
 HomePage.prototype.addText = function(id, position, title, copy) {
@@ -52,7 +52,6 @@ HomePage.prototype.autoChangeTDR = function() {
 	window.setInterval(function(){
 		if (index < 3) {
 			index += 1
-			console.log(index)
 			self.displayThinkDoReviewSection(TDR[index])
 		} else {
 			console.log(index)

@@ -1,19 +1,53 @@
 $(document).ready(function(){
 
 	var homePage = new HomePage()
-	var servicesPage = new ServicesPage()
+	var servicesPage = new ServicesPage(homePage)
 
 	loadPageConstants()
-	loadHomepage()
+	eventListeners()
+	checkPageHash()
+
+	function checkPageHash () {
+		var page = window.location.hash
+		if (page === '#services') {
+			loadServicesPage()
+		} else {
+			loadHomePage()
+		}
+	}
 
 	function loadPageConstants () {
 		var headerMenu = new HeaderMenu()
 		headerMenu.menuItem("HOME", "tagtheagency.com")
-		headerMenu.menuItem("SERVICES", "tagtheagency.com/services/")
+		headerMenu.menuItem("SERVICES")
 		headerMenu.menuItem("TRENDS", "trends.tagtheagency.com")
+		headerMenu.menuItem("VIRTUAL REALITY")
+		headerMenu.menuItem("TALENT ARMY")
+		headerMenu.menuItem("CONTACT")
 	}
 
-	function loadHomepage () {
+	function eventListeners () {
+		$('#services_menu_item').on('click', function (e) {
+			e.preventDefault()
+			loadServicesPage()
+		})
+
+		$('#home_menu_item').on('click', function (e) {
+			e.preventDefault()
+			loadHomePage()
+		})
+
+		$('#virtual_reality_menu_item').on('click', function (e) {
+			e.preventDefault()
+			loadVirtualRealityPage()
+		})
+	}
+
+	function loadHomePage () {
+		clearInterval(servicesPage.services_interval)
+		$('#content').empty()
+		window.location.hash = '';
+
 		homePage.setupSection('homepage_video')
 		homePage.setupSection('tag_copy_section', 'homepage_double_grid')
 		homePage.setupSection('wanna_play_section', 'homepage_double_grid')
@@ -21,8 +55,6 @@ $(document).ready(function(){
 		homePage.setupSection('think_do_review_section', 'homepage_double_grid')
 		homePage.setupSection('team_section', 'homepage_double_grid')
 		homePage.setupSection('trends_section', 'homepage_double_grid')
-
-		// homePage.homepageTitle()
 
 		var url = 'vids/tag_30s.mp4'
 		homePage.homepageVideo(url)
@@ -58,32 +90,44 @@ $(document).ready(function(){
 		homePage.addGrid('trends_section')
 		homePage.addImage('trends_section', 'right', 'imgs/yellow_carousel.gif')
 		homePage.addText('trends_section', 'left', 'Trends', 'The world of social media is fast becoming video based and at TAG we love to create videos designed for the social media space!<br><br>This page brings you the latest trending videos from around the world, automatically pulling the top trending clips from Vine, YouTube and Reddit, we hope you enjoy!')
-
-
 	}
 
 	function loadServicesPage () {
-		servicesPage.setupDivs()
-		servicesPage.serviceItem("Research", "Competitive analysis, target audience profiling, we watch to see what the competition is doing, researching the competitive playing field that is your marker, equipping you and your team with the information and knowledge you need. New to social or already up and running, knowledge is power, power to win!", "#")
-		servicesPage.serviceItem("Strategy", "Developing a plan to win, not just for the first game, but also for the future games. No professional game is won with out a strong, tested and well thought through strategy! At TAG we have a diverse team of experts in the Social Media space, with deep understanding of branding, strategy and how to pull it all together through creative.</br></br>If you want to win, then you need to have us on your team!", "#")
-		servicesPage.serviceItem("Campaigns and Creative", "Ideas that connect with your strategy, ideas brought to life though social media, ideas that are designed to be amplified, talked about and shared.</br></br>Flowing from the creative idea we work to develop campaigns that are specific to the key social networks for your audience, from Facebook to Snapchat, we create engaging and dynamic campaigns to help you win!", "#")
-		servicesPage.serviceItem("Corporate Consulting", "One of our specialists can work with your senior team to bring your company to life though social innovation, beyond just marketing, diving into the depths of your brands culture, inspiring and invigorating your team.", "#")
-		servicesPage.serviceItem("Strategic Content", "TAG can help develop specific content that resonates with your audience for key events, specific promotions, delicate announcements or creating meme's to drive content engagement and entertain your audience!", "#")
-		servicesPage.serviceItem("Content Production", "This is best done from within a brand, however sometimes there is situations where you need help, advice or training. At TAG we can help your team develop content for your social channels, we can work alongside your team through to producing content for you, whatever your need we have a specialist ready and waiting.", "#")
-		servicesPage.serviceItem("Video Production", "Video and social media go together like marmite and cheese in a school lunch box. Naturally TAG has the ability to shoot, direct, produce video content for social media channels, the only limit is your imagination!", "#")
-		servicesPage.serviceItem("Email Marketing", "You bet we do! Email marketing is still the most effective sales tool in the digital game. With every social campaign an opportunity to grow your email database TAG has the tools and experience to help turn these list into a valuable sales channel for your brand!", "#")
-		servicesPage.serviceItem("Facebook Apps", "Custom Facebook apps are a great way to inspire new fans, reward your existing community or bring together your other social networks. Boosting your brand game within Facebook. Whether it's a simple giveaway, a YouTube app or something more complex like a user-submitted photo-upload competition, we have our own technology and platform to tailor something to suit your specific needs and goals. All or Facebook apps are optimised for all devices – mobile, tablet and desktop.", "#")
-		servicesPage.serviceItem("Social Media Audits", "Already kicking ass on social media? TAG can provide you with an audit to help improve your existing social media execution, benchmarking your team performance, then helping them to elevate their level of game play!", "#")
-		servicesPage.serviceItem("Social Media Advertising", "Advertising on social media channels can put the right content in front of the right people at the right time. TAG provides a full service from ad planning and placement though to creating content designed for advertising.", "#")
-		servicesPage.serviceItem("Activations", "One of the most fun parts of the job, the TAG team loves nothing more than taking a brand into the ‘real' world, combining the integration of social media and technology in the daily lives of consumers, leveraging it to inspire them to interact in a meaningful, real and honest way. Nothing beats content published and shared by a community, that's amplification, that's true social media.", "#")
-		servicesPage.serviceItem("Event Amplification", "The TAG team can help amplify your events, extend them beyond the walls of the event, pushing key content and experiences out into the world. The TAG team can live promote your event though social channels, working to have them trending your messages. From tweeting, on site video production through to live streaming through periscope, the TAG team has it covered.", "#")
-		servicesPage.serviceItem("Engagement points", "Inspire people to share your content doesn't just stay online! The team at TAG can work with you to develop unique engagement points within your physical and digital environments to inspire people to share your content, to inspire people to help you play the social game to win!", "#")
-		servicesPage.contact()
-		$(".service_button").on("click", function(e) {
-			servicesPage.scrollTo(e.currentTarget.id)
-		});
+		$('#content').empty()
+		window.location.hash = 'services';
+		servicesPage.setupSection('services_carousel')
+		servicesPage.servicesButtonsWrapper('services_carousel')
+		servicesPage.servicesToggleButton('services_carousel', 'research')
+		servicesPage.servicesToggleButton('services_carousel', 'strategy')
+		servicesPage.servicesToggleButton('services_carousel', 'campaigns_creative')
+		servicesPage.servicesToggleButton('services_carousel', 'video')
+
+		homePage.addGrid('services_carousel')
+		homePage.addImage('services_carousel', 'left', 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383')
+		homePage.addText('services_carousel', 'right', 'Research', 'We watch to see what the competition is doing; researching the competitive playing field that is your marker and equipping you and your team with the information and knowledge you need. If you\'re new to social media or already up and running, knowledge is power, power to win!')
+	
+		var target = 'services_carousel'
+
+		var research_text = [target, 'right', 'Research', 'We watch to see what the competition is doing; researching the competitive playing field that is your marker and equipping you and your team with the information and knowledge you need. If you\'re new to social media or already up and running, knowledge is power, power to win!']
+		var research_image = [target, 'left', 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383']
+	
+		var strategy_text = [target, 'left', 'Strategy', 'Developing a plan to win, not just for the first game, but also for future games. No professional game is won without a strong, tested and well thought out strategy. <br/> At TAG we have a diverse team of experts in the social media space, with deep understanding of branding, strategy and how to pull it all together through creative processes and social innovation. Beyond just marketing, we will dive into the depths of your brands culture, inspiring and invigorating your team.']
+		var strategy_image = [target, 'right', 'http://blogs-images.forbes.com/clareoconnor/files/2015/03/iwatch_retailers_retale-e1426179110683.png']
+		
+		var videos_text = [target, 'right', 'Video Production', 'Video and social media go together like marmite and cheese in a school lunch box. Naturally, TAG has the ability to shoot, direct and produce video content for social media channels, weather it’s on our own in house green screen or somewhere in the field!</br>The only limit is your imagination!']
+		var videos_image = [target, 'left', 'http://www.officialpsds.com/images/thumbs/Canon-Camera-with-Color-Lense-psd75638.png']
+		servicesPage.autoChangeServices([[research_text, research_image], [strategy_text, strategy_image], [videos_text, videos_image]], homePage)
 	}
 
+	function loadVirtualRealityPage () {
+		$('#content').empty()
+		window.location.hash = 'virtual-reality';
+
+		homePage.setupSection('virtual_reality_section', 'homepage_double_grid')
+		homePage.addGrid('virtual_reality_section')
+		// homePage.addImage('virtual_reality_section', 'left', 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383')
+		homePage.addText('virtual_reality_section', 'right', 'VR Studios', 'Welcome to the VR Studio of TAG the agency. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</br>From Oculus Rift, to 360-degree video, to hologram technology; the VR Studio collaborates with the best and brightest in the industry to provide a complete solution for your brand in this new and innovate space of advertising')
+	}
 
 
 })
