@@ -21,17 +21,25 @@ $(document).ready(function(){
 		headerMenu.menuItem("HOME", "tagtheagency.com")
 		headerMenu.menuItem("SERVICES")
 		headerMenu.menuItem("TRENDS", "trends.tagtheagency.com")
+		headerMenu.menuItem("VIRTUAL REALITY")
+		headerMenu.menuItem("TALENT ARMY")
+		headerMenu.menuItem("CONTACT")
 	}
 
 	function eventListeners () {
-		$('#SERVICES_menu_item').on('click', function (e) {
+		$('#services_menu_item').on('click', function (e) {
 			e.preventDefault()
 			loadServicesPage()
 		})
 
-		$('#HOME_menu_item').on('click', function (e) {
+		$('#home_menu_item').on('click', function (e) {
 			e.preventDefault()
 			loadHomePage()
+		})
+
+		$('#virtual_reality_menu_item').on('click', function (e) {
+			e.preventDefault()
+			loadVirtualRealityPage()
 		})
 	}
 
@@ -111,6 +119,15 @@ $(document).ready(function(){
 		servicesPage.autoChangeServices([[research_text, research_image], [strategy_text, strategy_image], [videos_text, videos_image]], homePage)
 	}
 
+	function loadVirtualRealityPage () {
+		$('#content').empty()
+		window.location.hash = 'virtual-reality';
+
+		homePage.setupSection('virtual_reality_section', 'homepage_double_grid')
+		homePage.addGrid('virtual_reality_section')
+		// homePage.addImage('virtual_reality_section', 'left', 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383')
+		homePage.addText('virtual_reality_section', 'right', 'VR Studios', 'Welcome to the VR Studio of TAG the agency. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</br>From Oculus Rift, to 360-degree video, to hologram technology; the VR Studio collaborates with the best and brightest in the industry to provide a complete solution for your brand in this new and innovate space of advertising')
+	}
 
 
 })

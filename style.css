@@ -104,6 +104,14 @@ html, body, #container, #content{
 }
 
 .homepage_text_section {
+	left:50%;
+	/*top:50%;*/
+	padding: 1em;
+	/*max-width:50%;*/
+	/*max-height:90%;*/
+	overflow-y:auto;
+	transform: translate(-50%,-50%);
+	display: inline-block;
 	position: relative;
 	top: 50%;
 }
@@ -121,8 +129,13 @@ html, body, #container, #content{
 }
 
 #TDR_accordian {
+	height: 55%;
+	left:50%;
+	padding: 1em;
+	overflow-y:auto;
+	transform: translate(-50%,-50%);
 	position: relative;
-	top: 50%;
+	top: 55%;
 	text-align: left;
 	margin-left: 20%;
 }
