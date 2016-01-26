@@ -104,7 +104,9 @@ html, body, #container, #content{
 }
 
 .homepage_text_section {
-	margin-top: 50%;
+	position: relative;
+	top: 50%;
+	/*margin-top: 50%;*/
 }
 
 .copy_title {
