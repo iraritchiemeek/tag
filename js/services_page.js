@@ -21,7 +21,7 @@ ServicesPage.prototype.refreshServiceSections = function() {
 ServicesPage.prototype.autoChangeServices = function(nested_services_array, HomePage) {
 	var index = -1
 	var self = this
-	window.setInterval(function(){
+	this.services_interval = window.setInterval(function(){
 		var max_index = nested_services_array.length
 		if (index >= max_index - 1) {
 			index = 0

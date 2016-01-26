@@ -36,6 +36,7 @@ $(document).ready(function(){
 	}
 
 	function loadHomePage () {
+		clearInterval(servicesPage.services_interval)
 		$('#content').empty()
 		window.location.hash = '';
 
