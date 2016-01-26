@@ -98,7 +98,7 @@ html, body, #container, #content{
 	float: left;
 	width: 50%;
 	height: 100%;
-	background-size: 70%;
+	background-size: 75%;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -106,7 +106,6 @@ html, body, #container, #content{
 .homepage_text_section {
 	position: relative;
 	top: 50%;
-	/*margin-top: 50%;*/
 }
 
 .copy_title {
@@ -122,9 +121,10 @@ html, body, #container, #content{
 }
 
 #TDR_accordian {
+	position: relative;
+	top: 50%;
 	text-align: left;
 	margin-left: 20%;
-	margin-top: 50%;
 }
 
 #TDR_title {
@@ -154,9 +154,9 @@ html, body, #container, #content{
 	font-size: 1.3vw;
 	display: none;
 	font-family: 'Raleway';
-	position: absolute;
+	position: absolute !important;
 	text-align: left;
-	width: 25%;
+	width: 75%;
 }
 
 #team_section_left {
@@ -203,4 +203,16 @@ html, body, #container, #content{
 
 .services_toggle_buttons:hover {
 	background-color: black;
+}
+
+/*------------------------SERVICES PAGE ENDS------------------------------*/
+
+/*------------------------iPad styles------------------------------*/
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+
 }
