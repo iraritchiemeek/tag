@@ -11,6 +11,8 @@ $(document).ready(function(){
 		var page = window.location.hash
 		if (page === '#services') {
 			loadServicesPage()
+		} else if (page === '#virtual-reality') {
+			loadVirtualRealityPage()
 		} else {
 			loadHomePage()
 		}
@@ -43,9 +45,13 @@ $(document).ready(function(){
 		})
 	}
 
-	function loadHomePage () {
-		clearInterval(servicesPage.services_interval)
+	function clearPage () {
 		$('#content').empty()
+		clearInterval(servicesPage.services_interval)
+	}
+
+	function loadHomePage () {
+		clearPage()
 		window.location.hash = '';
 
 		homePage.setupSection('homepage_video')
@@ -93,7 +99,7 @@ $(document).ready(function(){
 	}
 
 	function loadServicesPage () {
-		$('#content').empty()
+		clearPage()
 		window.location.hash = 'services';
 		servicesPage.setupSection('services_carousel')
 		servicesPage.servicesButtonsWrapper('services_carousel')
@@ -120,14 +126,15 @@ $(document).ready(function(){
 	}
 
 	function loadVirtualRealityPage () {
-		$('#content').empty()
+		clearPage()
 		window.location.hash = 'virtual-reality';
 
 		homePage.setupSection('virtual_reality_section', 'homepage_double_grid')
 		homePage.addGrid('virtual_reality_section')
-		// homePage.addImage('virtual_reality_section', 'left', 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383')
-		homePage.addText('virtual_reality_section', 'right', 'VR Studios', 'Welcome to the VR Studio of TAG the agency. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</br>From Oculus Rift, to 360-degree video, to hologram technology; the VR Studio collaborates with the best and brightest in the industry to provide a complete solution for your brand in this new and innovate space of advertising')
+		homePage.addImage('virtual_reality_section', 'left', 'http://south.io/wp-content/uploads/2015/12/OculusRift.png')
+		homePage.addText('virtual_reality_section', 'right', 'VR Studios', 'Welcome to the VR Studio of TAG the agency. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</br></br>From Oculus Rift, to 360-degree video, to hologram technology; the VR Studio collaborates with the best and brightest in the industry to provide a complete solution for your brand in this new and innovate space of advertising</br></br>Get in touch today; we\'d love to help bring your brand to life, truly, from virtual to the real world!')
 	}
+
 
 
 })
