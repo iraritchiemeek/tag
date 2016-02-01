@@ -89,6 +89,7 @@ html, body, #container, #content{
 }
 
 #homepage_video {
+	margin-top: 0 !important;
 	height: 120% !important;
 	background-color: white !important;
 }
@@ -109,10 +110,7 @@ html, body, #container, #content{
 
 .homepage_text_section {
 	left:50%;
-	/*top:50%;*/
 	padding: 1em;
-	/*max-width:50%;*/
-	/*max-height:90%;*/
 	overflow-y:auto;
 	transform: translate(-50%,-50%);
 	display: inline-block;
