@@ -29,19 +29,23 @@ $(document).ready(function(){
 	}
 
 	function eventListeners () {
-		$('#services_menu_item').on('click', function (e) {
+		$('#services_menu_item').on('click', function(e) {
 			e.preventDefault()
 			loadServicesPage()
 		})
 
-		$('#home_menu_item').on('click', function (e) {
+		$('#home_menu_item').on('click', function(e) {
 			e.preventDefault()
 			loadHomePage()
 		})
 
-		$('#virtual_reality_menu_item').on('click', function (e) {
+		$('#virtual_reality_menu_item').on('click', function(e) {
 			e.preventDefault()
 			loadVirtualRealityPage()
+		})
+
+		$('#container').on('click', '.services_toggle_buttons' , function(e) {
+			console.log(e.target.id.split('_'))
 		})
 	}
 

@@ -18,20 +18,15 @@ ServicesPage.prototype.refreshServiceSections = function() {
 };
 
 ServicesPage.prototype.autoChangeServices = function(services_array, HomePage) {
-
 	var self = this
 	var index = 0;
-
 	function nextItem() {
 	  self.refreshServiceSections()
 	  HomePage.addGrid(services_array[index].image.target)
-	  console.log(services_array[index].image.target)
 	  HomePage.addImage(services_array[index].image.target, services_array[index].image.position, services_array[index].image.url)
 	  HomePage.addText(services_array[index].text.target, services_array[index].text.position, services_array[index].text.title, services_array[index].text.text)
 	  index = (index + 1) % services_array.length;
 	}
-
 	nextItem();
-
 	window.setInterval(nextItem, 2000);
 };
