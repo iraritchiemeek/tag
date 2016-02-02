@@ -15,26 +15,26 @@ ServicesPage.prototype.servicesToggleButton = function(target, id) {
 
 ServicesPage.prototype.refreshServiceSections = function() {
 	$('.left_section, .right_section').remove()
-	// $('.left_section, .right_section').css({'backgroundImage':'none'})
 };
 
-ServicesPage.prototype.autoChangeServices = function(nested_services_array, HomePage) {
+ServicesPage.prototype.autoChangeServices = function(services_array, HomePage) {
 	var index = -1
 	var self = this
 	this.services_interval = window.setInterval(function(){
-		var max_index = nested_services_array.length
+		var max_index = services_array.length
 		if (index >= max_index - 1) {
 			index = 0
 		} else {
 			index ++
 		}
-		for (var i = nested_services_array[index].length - 1; i >= 0; i--) {
-			var target = nested_services_array[index][0][0]
-			var image_position = nested_services_array[index][1][1]
-			var text_position = nested_services_array[index][0][1]
-			var image = nested_services_array[index][1][2]
-			var title = nested_services_array[index][0][2]
-			var text = nested_services_array[index][0][3]
+		for (var i = services_array[index].length - 1; i >= 0; i--) {
+			console.log(i[index])
+			var target = services_array[index][0]
+			var text_position = services_array[index][1]
+			var title = services_array[index][2]
+			var text = services_array[index][3]
+			var image_position = services_array[index][4]
+			var image = services_array[index][5]
 			self.refreshServiceSections()
 			HomePage.addGrid(target)
 			HomePage.addImage(target, image_position, image)
