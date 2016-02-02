@@ -18,28 +18,20 @@ ServicesPage.prototype.refreshServiceSections = function() {
 };
 
 ServicesPage.prototype.autoChangeServices = function(services_array, HomePage) {
-	var index = -1
-	var self = this
-	this.services_interval = window.setInterval(function(){
-		var max_index = services_array.length
-		if (index >= max_index - 1) {
-			index = 0
-		} else {
-			index ++
-		}
-		for (var i = services_array[index].length - 1; i >= 0; i--) {
-			console.log(i[index])
-			var target = services_array[index][0]
-			var text_position = services_array[index][1]
-			var title = services_array[index][2]
-			var text = services_array[index][3]
-			var image_position = services_array[index][4]
-			var image = services_array[index][5]
-			self.refreshServiceSections()
-			HomePage.addGrid(target)
-			HomePage.addImage(target, image_position, image)
-			HomePage.addText(target, text_position, title, text)
 
-		};
-	}, 2000)
+	var self = this
+	var index = 0;
+
+	function nextItem() {
+	  self.refreshServiceSections()
+	  HomePage.addGrid(services_array[index].image.target)
+	  console.log(services_array[index].image.target)
+	  HomePage.addImage(services_array[index].image.target, services_array[index].image.position, services_array[index].image.url)
+	  HomePage.addText(services_array[index].text.target, services_array[index].text.position, services_array[index].text.title, services_array[index].text.text)
+	  index = (index + 1) % services_array.length;
+	}
+
+	nextItem();
+
+	window.setInterval(nextItem, 2000);
 };
