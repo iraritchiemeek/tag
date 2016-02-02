@@ -26,7 +26,15 @@ ServicesPage.prototype.autoChangeServices = function(services_array, HomePage) {
 	  HomePage.addImage(services_array[index].image.target, services_array[index].image.position, services_array[index].image.url)
 	  HomePage.addText(services_array[index].text.target, services_array[index].text.position, services_array[index].text.title, services_array[index].text.text)
 	  index = (index + 1) % services_array.length;
+	  self.highlightButton(services_array[index].text.title.toLowerCase())
 	}
 	nextItem();
-	window.setInterval(nextItem, 2000);
+	window.setInterval(nextItem, 10000);
 };
+
+ServicesPage.prototype.highlightButton = function(button_id) {
+	$('.services_toggle_buttons').css({'backgroundColor':'white'})
+	console.log('#' + button_id + '_services_button')
+	$('#' + button_id + '_services_button').css({'backgroundColor':'black'})
+};
+

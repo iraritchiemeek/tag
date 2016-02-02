@@ -45,7 +45,7 @@ $(document).ready(function(){
 		})
 
 		$('#container').on('click', '.services_toggle_buttons' , function(e) {
-			console.log(e.target.id.split('_'))
+			console.log(e.target.id.split('_')[0])
 		})
 	}
 
@@ -110,11 +110,7 @@ $(document).ready(function(){
 		servicesPage.servicesToggleButton('services_carousel', 'research')
 		servicesPage.servicesToggleButton('services_carousel', 'strategy')
 		servicesPage.servicesToggleButton('services_carousel', 'campaigns_creative')
-		servicesPage.servicesToggleButton('services_carousel', 'video')
-
-		homePage.addGrid('services_carousel')
-		homePage.addImage('services_carousel', 'left', 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383')
-		homePage.addText('services_carousel', 'right', 'Research', 'We watch to see what the competition is doing; researching the competitive playing field that is your marker and equipping you and your team with the information and knowledge you need. If you\'re new to social media or already up and running, knowledge is power, power to win!')
+		servicesPage.servicesToggleButton('services_carousel', 'videos')
 	
 		var target = 'services_carousel'
 

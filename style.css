@@ -213,7 +213,7 @@ html, body, #container, #content{
 	border-radius: 50%;
 	width: 15px;
     height: 15px;
-    background: white;
+    background-color: white;
 }
 
 .services_toggle_buttons:hover {
