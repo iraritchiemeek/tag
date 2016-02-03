@@ -1,6 +1,7 @@
-function ServicesPage () {
+function ServicesPage (homePage) {
 
-	this.target = 'services_carousel'
+	this.homePage = homePage
+	this.targetDiv = 'services_carousel'
 
 	var research = {text: {
 			position: 'right',
@@ -46,19 +47,20 @@ ServicesPage.prototype.setupSection = function(id) {
 	$('#content').append('<div id="' + id + '" class="services_section"></div>')
 };
 
-ServicesPage.prototype.servicesButtonsWrapper = function(target) {
-	$('#' + target).append('<div id="services_buttons_wrapper"></div>')
+ServicesPage.prototype.servicesButtonsWrapper = function(targetDiv) {
+	$('#' + targetDiv).append('<div id="services_buttons_wrapper"></div>')
 };
 
-ServicesPage.prototype.servicesToggleButton = function(target, id) {
+ServicesPage.prototype.servicesToggleButton = function(targetDiv, id) {
 	$('#services_buttons_wrapper').append('<div id="' + id + '_services_button" class="services_toggle_buttons"></div>')
 };
 
 ServicesPage.prototype.refreshServiceSections = function() {
 	$('.left_section, .right_section').remove()
+	this.homePage.addGrid(this.targetDiv)
 };
 
-ServicesPage.prototype.autoChangeServices = function(services_array, HomePage) {
+ServicesPage.prototype.autoChangeServices = function(services_array) {
 	var self = this
 	var index = 0;
 	var time = 0
@@ -68,20 +70,19 @@ ServicesPage.prototype.autoChangeServices = function(services_array, HomePage) {
 		$.each(self.services, function(key, value) {
 			setTimeout( function(){ 
 				self.refreshServiceSections()
-				self.highlightButton(value.text.title.toLowerCase())
-				HomePage.addGrid(self.target)
-				HomePage.addImage(self.target, value.image.position, value.image.url)
-				HomePage.addText(self.target, value.text.position, value.text.title, value.text.text)
+				self.loadSlide(value)
 				index = (index + 1) % services_array.length;
 			}, time)
-			time += 2000;
+			time += 8000;
 		})
 		setTimeout(testing, 0)
 	}
 };
 
-ServicesPage.prototype.loadSlide = function(slide_info) {
-
+ServicesPage.prototype.loadSlide = function(slide) {
+	this.highlightButton(slide.text.title.toLowerCase())
+	this.homePage.addImage(this.targetDiv, slide.image.position, slide.image.url)
+	this.homePage.addText(this.targetDiv, slide.text.position, slide.text.title, slide.text.text)
 };
 
 ServicesPage.prototype.highlightButton = function(button_id) {
@@ -91,5 +92,6 @@ ServicesPage.prototype.highlightButton = function(button_id) {
 };
 
 ServicesPage.prototype.changeSlide = function(button_id) {
-	console.log(button_id)
+	this.refreshServiceSections()
+	this.loadSlide(this.services[button_id])
 };
