@@ -109,7 +109,6 @@ $(document).ready(function(){
 		servicesPage.servicesButtonsWrapper('services_carousel')
 		servicesPage.servicesToggleButton('services_carousel', 'research')
 		servicesPage.servicesToggleButton('services_carousel', 'strategy')
-		servicesPage.servicesToggleButton('services_carousel', 'campaigns_creative')
 		servicesPage.servicesToggleButton('services_carousel', 'videos')
 	
 		var target = 'services_carousel'

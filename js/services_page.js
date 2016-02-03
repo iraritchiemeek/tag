@@ -22,11 +22,11 @@ ServicesPage.prototype.autoChangeServices = function(services_array, HomePage) {
 	var index = 0;
 	function nextItem() {
 	  self.refreshServiceSections()
+	  self.highlightButton(services_array[index].text.title.toLowerCase())
 	  HomePage.addGrid(services_array[index].image.target)
 	  HomePage.addImage(services_array[index].image.target, services_array[index].image.position, services_array[index].image.url)
 	  HomePage.addText(services_array[index].text.target, services_array[index].text.position, services_array[index].text.title, services_array[index].text.text)
 	  index = (index + 1) % services_array.length;
-	  self.highlightButton(services_array[index].text.title.toLowerCase())
 	}
 	nextItem();
 	window.setInterval(nextItem, 10000);
