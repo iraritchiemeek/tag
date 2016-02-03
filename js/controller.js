@@ -45,8 +45,9 @@ $(document).ready(function(){
 		})
 
 		$('#container').on('click', '.services_toggle_buttons' , function(e) {
-			console.log(e.target.id.split('_')[0])
+			servicesPage.changeSlide(e.target.id.split('_')[0])
 		})
+
 	}
 
 	function clearPage () {

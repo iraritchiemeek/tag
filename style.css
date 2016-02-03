@@ -217,7 +217,7 @@ html, body, #container, #content{
 }
 
 .services_toggle_buttons:hover {
-	background-color: black;
+	background-color: black !important;
 }
 
 /*------------------------SERVICES PAGE ENDS------------------------------*/
