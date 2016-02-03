@@ -41,6 +41,8 @@ function ServicesPage (homePage) {
 		strategy: strategy,
 		videos: videos
 	}
+
+	this.timeOut = 0
 }
 
 ServicesPage.prototype.setupSection = function(id) {
@@ -72,8 +74,8 @@ ServicesPage.prototype.autoChangeServices = function(services_array) {
 				self.refreshServiceSections()
 				self.loadSlide(value)
 				index = (index + 1) % services_array.length;
-			}, time)
-			time += 8000;
+			}, self.timeOut)
+			self.timeOut += 8000;
 		})
 		setTimeout(testing, 0)
 	}
@@ -94,4 +96,5 @@ ServicesPage.prototype.highlightButton = function(button_id) {
 ServicesPage.prototype.changeSlide = function(button_id) {
 	this.refreshServiceSections()
 	this.loadSlide(this.services[button_id])
+	this.timeOut += 8000
 };
