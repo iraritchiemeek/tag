@@ -54,7 +54,6 @@ HomePage.prototype.autoChangeTDR = function() {
 			index += 1
 			self.displayThinkDoReviewSection(TDR[index])
 		} else {
-			console.log(index)
 			index = 0
 			self.displayThinkDoReviewSection(TDR[0])
 		}

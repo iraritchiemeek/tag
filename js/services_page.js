@@ -64,21 +64,25 @@ ServicesPage.prototype.refreshServiceSections = function() {
 
 ServicesPage.prototype.autoChangeServices = function(services_array) {
 	var self = this
-	var index = 0;
-	var time = 0
+	var index = 0
+	this.delayTime = 0
 
 	testing()
 	function testing() {
 		$.each(self.services, function(key, value) {
 			setTimeout( function(){ 
-				self.refreshServiceSections()
-				self.loadSlide(value)
-				index = (index + 1) % services_array.length;
-			}, self.timeOut)
-			self.timeOut += 8000;
+				if (window.location.hash === '#services') {
+					self.refreshServiceSections()
+					self.loadSlide(value)
+					index = (index + 1) % services_array.length;
+				} else {
+					return
+				}
+			}, self.delayTime)
+				self.delayTime += 8000;
 		})
-		setTimeout(testing, 0)
 	}
+	setTimeout(testing, 0)
 };
 
 ServicesPage.prototype.loadSlide = function(slide) {
@@ -96,5 +100,5 @@ ServicesPage.prototype.highlightButton = function(button_id) {
 ServicesPage.prototype.changeSlide = function(button_id) {
 	this.refreshServiceSections()
 	this.loadSlide(this.services[button_id])
-	this.timeOut += 8000
+	this.delayTime += 8000
 };

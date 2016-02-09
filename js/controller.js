@@ -50,13 +50,8 @@ $(document).ready(function(){
 
 	}
 
-	function clearPage () {
-		$('#content').empty()
-		clearInterval(servicesPage.services_interval)
-	}
-
 	function loadHomePage () {
-		clearPage()
+		$('#content').empty()
 		window.location.hash = '';
 
 		homePage.setupSection('homepage_video')
@@ -104,7 +99,7 @@ $(document).ready(function(){
 	}
 
 	function loadServicesPage () {
-		clearPage()
+		$('#content').empty()
 		window.location.hash = 'services';
 		servicesPage.setupSection('services_carousel')
 		servicesPage.servicesButtonsWrapper('services_carousel')
@@ -157,7 +152,7 @@ $(document).ready(function(){
 	}
 
 	function loadVirtualRealityPage () {
-		clearPage()
+		$('#content').empty()
 		window.location.hash = 'virtual-reality';
 
 		homePage.setupSection('virtual_reality_section', 'homepage_double_grid')
