@@ -10,7 +10,7 @@ function ServicesPage (homePage) {
 		},
 		image: {
 			position: 'left',
-			url: 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383'
+			url: 'imgs/panda.png'
 		}
 	}
 
@@ -21,7 +21,7 @@ function ServicesPage (homePage) {
 		},
 		image: {
 			position: 'right',
-			url: 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383'
+			url: 'imgs/old_car.png'
 		}
 	}
 
@@ -32,18 +32,18 @@ function ServicesPage (homePage) {
 		},
 		image: {
 			position: 'left',
-			url: 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383'
+			url: 'imgs/robot.png'
 		}
 	}
 
 	var campaigns_and_creative = {text: {
 			position: 'left',
 			title: 'Campaigns and Creative',
-			text: 'Ideas that connect with your strategy, ideas brought to life through social media, ideas that are designed to be amplified, talked about and shared.</br>Flowing from the creative idea, we work to develop campaigns that are specific to the key social networks for your audience. From Facebook to Snapchat, we have the depth and experience to create engaging and dynamic campaigns to help you win!</br>Campaigns can range from content based, to Facebook apps, through to videos and event activations, at TAG the agency, we have the in house ability to execute on anything you need in the social media space.</br></br>Our teams strength is in:<ul><li>Strategic content</li><li>Facebook App deign and development</li><li>Email Marketing</li><li>Brand activations</li><li>Social media advertising planning and placement</li><li>Social media content production</li><li>Event amplification</li>'
+			text: 'Ideas that connect with your strategy, ideas brought to life through social media, ideas that are designed to be amplified, talked about and shared.</br>Flowing from the creative idea, we work to develop campaigns that are specific to the key social networks for your audience. From Facebook to Snapchat, we have the depth and experience to create engaging and dynamic campaigns to help you win!'
 		},
 		image: {
 			position: 'right',
-			url: 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383'
+			url: 'imgs/boat.png'
 		}
 	}
 
@@ -74,7 +74,7 @@ ServicesPage.prototype.refreshServiceSections = function() {
 	this.homePage.addGrid(this.targetDiv)
 };
 
-ServicesPage.prototype.autoChangeServices = function(services_array) {
+ServicesPage.prototype.autoChangeServices = function() {
 	var self = this
 	var index = 0
 	this.delayTime = 0
@@ -86,7 +86,7 @@ ServicesPage.prototype.autoChangeServices = function(services_array) {
 				if (window.location.hash === '#services') {
 					self.refreshServiceSections()
 					self.loadSlide(value)
-					index = (index + 1) % services_array.length;
+					index = (index + 1) % self.services.length;
 				} else {
 					return
 				}
@@ -105,7 +105,6 @@ ServicesPage.prototype.loadSlide = function(slide) {
 
 ServicesPage.prototype.highlightButton = function(button_id) {
 	$('.services_toggle_buttons').css({'backgroundColor':'white'})
-	// console.log('#' + button_id.replace(/\s+/g, '_').toLowerCase() + '_services_button')
 	$('#' + button_id.replace(/\s+/g, '_').toLowerCase() + '_services_button').css({'backgroundColor':'black'})
 };
 
