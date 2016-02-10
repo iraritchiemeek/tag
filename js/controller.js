@@ -45,7 +45,7 @@ $(document).ready(function(){
 		})
 
 		$('#container').on('click', '.services_toggle_buttons' , function(e) {
-			servicesPage.changeSlide(e.target.id.split('_')[0])
+			servicesPage.changeSlide(e.target.id.split('_services_button')[0])
 		})
 
 	}
@@ -106,6 +106,7 @@ $(document).ready(function(){
 		servicesPage.servicesToggleButton('services_carousel', 'research')
 		servicesPage.servicesToggleButton('services_carousel', 'strategy')
 		servicesPage.servicesToggleButton('services_carousel', 'videos')
+		servicesPage.servicesToggleButton('services_carousel', 'campaigns_and_creative')
 	
 		var target = 'services_carousel'
 
