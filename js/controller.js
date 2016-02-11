@@ -24,7 +24,7 @@ $(document).ready(function(){
 		headerMenu.menuItem("SERVICES")
 		headerMenu.menuItem("TRENDS", "trends.tagtheagency.com")
 		headerMenu.menuItem("VIRTUAL REALITY")
-		headerMenu.menuItem("INFLUENCES")
+		// headerMenu.menuItem("INFLUENCES")
 		headerMenu.menuItem("CONTACT")
 	}
 
@@ -102,6 +102,12 @@ $(document).ready(function(){
 		$('#content').empty()
 		window.location.hash = 'services';
 		servicesPage.setupSection('services_carousel')
+		homePage.setupSection('ux_section', 'homepage_double_grid')
+		homePage.setupSection('pepsi_section', 'homepage_double_grid')
+		homePage.setupSection('trustpower_section', 'homepage_double_grid')
+		homePage.setupSection('mountaindew_section', 'homepage_double_grid')
+
+
 		servicesPage.servicesButtonsWrapper('services_carousel')
 		servicesPage.servicesToggleButton('services_carousel', 'research')
 		servicesPage.servicesToggleButton('services_carousel', 'strategy')
@@ -109,6 +115,24 @@ $(document).ready(function(){
 		servicesPage.servicesToggleButton('services_carousel', 'campaigns_and_creative')
 	
 		servicesPage.autoChangeServices()
+
+		homePage.addGrid('ux_section')
+		homePage.addImage('ux_section', 'right', 'http://www.uxnewzealand.com/img/uxnz-logo.png')
+		homePage.addText('ux_section', 'left', 'UX New Zealand', 'At the end of 2015 we had the privilege of working with the team at UX New Zealand at their annual conference. It was an amazing two-day event, which shared and showcased the best of usability from New Zealand and around the world. Our task was to create content for their social channels during and beyond the event. If UX is your thing, then this event is not to be missed! www.uxnewzealand.com')
+
+		homePage.addGrid('pepsi_section')
+		homePage.addImage('pepsi_section', 'left', 'http://icons.iconarchive.com/icons/michael/coke-pepsi/512/Pepsi-Can-icon.png')
+		homePage.addText('pepsi_section', 'right', 'Pepsi New Zealand', 'In conjunction with Pepsi and the team at Brand Spanking we brought the future back to Wellington. To celebrate the 21st of October 2015 Pepsi New Zealand put on the film Back to the Future 2. The 21st of October 215, the very same date the DeLorean traveled forward in time too!')
+		
+		homePage.addGrid('trustpower_section')
+		homePage.addImage('trustpower_section', 'right', 'imgs/trustpower.jpg')
+		homePage.addText('trustpower_section', 'left', 'Trust Power', 'Trustpower approached us early in 2015 to create a campaign that targeted 20-35 year olds in Auckland, Wellington, Tauranga and Dunedin, and actively excluded Christchurch. The objective was to acquire an owned database that they could contact in future and to generate reach and brand awareness within the age bracket.</br>Trustpower’s core offering is power and Internet; it’s better together. We built them a mobile friendly Facebook app and directed users to the page through targeted Facebook advertising.</br></br>Once users landed on the app, they were asked to upload a photo of what they thought went better together, let us know their first name, last name and phone number. In return, they were in the draw to win one of ten Apple TVs, which incorporates both power and Internet and creating a solid campaign from advertising, to acquisition, to prize fulfillment. </br>Through a mixture of boosted Facebook page posts, and Facebook ads that directed users straight to the app, we reached over 860,000 people within the target demographic.')
+
+		homePage.addGrid('mountaindew_section')
+		homePage.addImage('mountaindew_section', 'left', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mountain_Dew_logo.svg/2000px-Mountain_Dew_logo.svg.png')
+		homePage.addText('mountaindew_section', 'right', 'Mountain Dew', 'TAG built a Facebook app, which was designed to engage with fans and inspire them to share the action sports they love. The app gave participants the chance to win a GoPro Hero 4 with a clever little lid that fits on your Mountain Dew bottle and doubles as a mount for your GoPro.')
+
+
 	}
 
 	function loadVirtualRealityPage () {

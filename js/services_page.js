@@ -70,7 +70,8 @@ ServicesPage.prototype.servicesToggleButton = function(targetDiv, id) {
 };
 
 ServicesPage.prototype.refreshServiceSections = function() {
-	$('.left_section, .right_section').remove()
+	$('#services_carousel_left, #services_carousel_right').remove()
+	// $('#services_carousel_left, #services_carousel_right').css({'backgroundImage':''})
 	this.homePage.addGrid(this.targetDiv)
 };
 
@@ -109,7 +110,6 @@ ServicesPage.prototype.highlightButton = function(button_id) {
 };
 
 ServicesPage.prototype.changeSlide = function(button_id) {
-	console.log(button_id)
 	this.refreshServiceSections()
 	this.loadSlide(this.services[button_id])
 	this.delayTime += 8000
