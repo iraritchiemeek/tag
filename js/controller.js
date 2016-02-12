@@ -25,7 +25,7 @@ $(document).ready(function(){
 		headerMenu.menuItem("TRENDS", "trends.tagtheagency.com")
 		headerMenu.menuItem("VIRTUAL REALITY")
 		// headerMenu.menuItem("INFLUENCES")
-		headerMenu.menuItem("CONTACT")
+		headerMenu.menuItem("CONTACT", "mailto:hello@tagtheagency.com")
 	}
 
 	function eventListeners () {
@@ -43,6 +43,11 @@ $(document).ready(function(){
 			e.preventDefault()
 			loadVirtualRealityPage()
 		})
+
+		// $('#contact_menu_item').on('click', function(e) {
+		// 	e.preventDefault()
+		// 	window.location.replace('mailto:address@gmail.com&subject=Hello there')
+		// })
 
 		$('#container').on('click', '.services_toggle_buttons' , function(e) {
 			servicesPage.changeSlide(e.target.id.split('_services_button')[0])
