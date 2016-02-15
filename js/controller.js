@@ -22,7 +22,7 @@ $(document).ready(function(){
 		var headerMenu = new HeaderMenu()
 		headerMenu.menuItem("HOME", "tagtheagency.com")
 		headerMenu.menuItem("SERVICES")
-		headerMenu.menuItem("TRENDS", "trends.tagtheagency.com")
+		headerMenu.menuItem("TRENDS", "http://www.trends.tagtheagency.com")
 		headerMenu.menuItem("VIRTUAL REALITY")
 		// headerMenu.menuItem("INFLUENCES")
 		headerMenu.menuItem("CONTACT", "mailto:hello@tagtheagency.com")
@@ -76,7 +76,7 @@ $(document).ready(function(){
 
 		homePage.addGrid('wanna_play_section')
 		homePage.addImage('wanna_play_section', 'right', 'imgs/yellow_table.gif')
-		homePage.addText('wanna_play_section', 'left', 'Wanna play?', 'What we do - think, create, do, live, love and breathe social media.Sure, we can look after your social channels, post content daily and all of that, but where we thrive is in the innovation and creative games of social media. We push the boundaries, we create campaigns that excite, inspire and entertain.')
+		homePage.addText('wanna_play_section', 'left', 'Wanna play?', 'What we do - think, create, do, live, love and breathe social media. Sure, we can look after your social channels, post content daily and all of that, but where we thrive is in the innovation and creative games of social media. We push the boundaries, we create campaigns that excite, inspire and entertain.')
 
 		homePage.addGrid('our_approach_section')
 		homePage.addImage('our_approach_section', 'left', 'imgs/white_motorbike.gif')
@@ -100,7 +100,7 @@ $(document).ready(function(){
 
 		homePage.addGrid('trends_section')
 		homePage.addImage('trends_section', 'right', 'imgs/yellow_carousel.gif')
-		homePage.addText('trends_section', 'left', 'Trends', 'The world of social media is fast becoming video based and at TAG we love to create videos designed for the social media space!<br><br>This page brings you the latest trending videos from around the world, automatically pulling the top trending clips from Vine, YouTube and Reddit, we hope you enjoy!')
+		homePage.addText('trends_section', 'left', 'Trends', 'The world of social media is fast becoming video based and at TAG we love to create videos designed for the social media space!<br><br>This page brings you the latest trending videos from around the world, automatically pulling the top trending clips from Vine, YouTube and Reddit. We hope you enjoy!')
 	}
 
 	function loadServicesPage () {
@@ -124,14 +124,15 @@ $(document).ready(function(){
 		homePage.addGrid('ux_section')
 		homePage.addImage('ux_section', 'right', 'http://www.uxnewzealand.com/img/uxnz-logo.png')
 		homePage.addText('ux_section', 'left', 'UX New Zealand', 'At the end of 2015 we had the privilege of working with the team at UX New Zealand at their annual conference. It was an amazing two-day event, which shared and showcased the best of usability from New Zealand and around the world. Our task was to create content for their social channels during and beyond the event. If UX is your thing, then this event is not to be missed! www.uxnewzealand.com')
+		servicesPage.videoButton('ux_section', 'https://www.youtube.com/watch?v=OsltYGFoZp4')
 
 		homePage.addGrid('pepsi_section')
 		homePage.addImage('pepsi_section', 'left', 'http://icons.iconarchive.com/icons/michael/coke-pepsi/512/Pepsi-Can-icon.png')
-		homePage.addText('pepsi_section', 'right', 'Pepsi New Zealand', 'In conjunction with Pepsi and the team at Brand Spanking we brought the future back to Wellington. To celebrate the 21st of October 2015 Pepsi New Zealand put on the film Back to the Future 2. The 21st of October 215, the very same date the DeLorean traveled forward in time too!')
+		homePage.addText('pepsi_section', 'right', 'Pepsi New Zealand', 'In conjunction with Pepsi and the team at Brand Spanking we brought the future back to Wellington. To celebrate the 21st of October 2015 Pepsi New Zealand screened Back to the Future 2. On the 21st of October 2015, the very same date the DeLorean traveled forward in time to!')
 		
 		homePage.addGrid('trustpower_section')
 		homePage.addImage('trustpower_section', 'right', 'imgs/trustpower.jpg')
-		homePage.addText('trustpower_section', 'left', 'Trust Power', 'Trustpower approached us early in 2015 to create a campaign that targeted 20-35 year olds in Auckland, Wellington, Tauranga and Dunedin, and actively excluded Christchurch. The objective was to acquire an owned database that they could contact in future and to generate reach and brand awareness within the age bracket.</br>Trustpower’s core offering is power and Internet; it’s better together. We built them a mobile friendly Facebook app and directed users to the page through targeted Facebook advertising.</br></br>Once users landed on the app, they were asked to upload a photo of what they thought went better together, let us know their first name, last name and phone number. In return, they were in the draw to win one of ten Apple TVs, which incorporates both power and Internet and creating a solid campaign from advertising, to acquisition, to prize fulfillment. </br>Through a mixture of boosted Facebook page posts, and Facebook ads that directed users straight to the app, we reached over 860,000 people within the target demographic.')
+		homePage.addText('trustpower_section', 'left', 'Trust Power', 'Trustpower approached us early in 2015 to create a campaign with the objective to acquire an owned database that they could contact in future and to generate reach and brand awareness</br>We built them a mobile friendly Facebook app and directed users to the page through targeted Facebook advertising.</br></br>Through a mixture of boosted Facebook page posts and Facebook ads that directed users straight to the app, we reached over 860,000 people within the target demographic.')
 
 		homePage.addGrid('mountaindew_section')
 		homePage.addImage('mountaindew_section', 'left', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mountain_Dew_logo.svg/2000px-Mountain_Dew_logo.svg.png')

@@ -80,8 +80,8 @@ ServicesPage.prototype.autoChangeServices = function() {
 	var index = 0
 	this.delayTime = 0
 
-	testing()
-	function testing() {
+	loopCarousel()
+	function loopCarousel() {
 		$.each(self.services, function(key, value) {
 			setTimeout( function(){ 
 				if (window.location.hash === '#services') {
@@ -94,8 +94,8 @@ ServicesPage.prototype.autoChangeServices = function() {
 			}, self.delayTime)
 				self.delayTime += 8000;
 		})
+		setTimeout(loopCarousel, 0)
 	}
-	setTimeout(testing, 0)
 };
 
 ServicesPage.prototype.loadSlide = function(slide) {
@@ -113,4 +113,8 @@ ServicesPage.prototype.changeSlide = function(button_id) {
 	this.refreshServiceSections()
 	this.loadSlide(this.services[button_id])
 	this.delayTime += 8000
+};
+
+ServicesPage.prototype.videoButton = function(target, url) {
+	$('#' + target).append('<div id="services_video_popout" data-url="' + url + '"></div>')
 };
