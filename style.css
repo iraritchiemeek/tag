@@ -220,6 +220,22 @@ html, body, #container, #content{
 	background-color: black !important;
 }
 
+.services_video_button {
+	width: 15%;
+	height: 7%;
+	border: 3px solid black;
+	border-radius: 3px;
+	position: relative;
+}
+
+.services_video_button_text {
+	display: inline-block;
+	left:50%;
+	top: 50%;
+	padding: 1em;
+	transform: translate(-50%,-50%);
+	position: absolute;
+}
 
 /*------------------------SERVICES PAGE ENDS------------------------------*/
 

@@ -124,15 +124,15 @@ $(document).ready(function(){
 		homePage.addGrid('ux_section')
 		homePage.addImage('ux_section', 'right', 'http://www.uxnewzealand.com/img/uxnz-logo.png')
 		homePage.addText('ux_section', 'left', 'UX New Zealand', 'At the end of 2015 we had the privilege of working with the team at UX New Zealand at their annual conference. It was an amazing two-day event, which shared and showcased the best of usability from New Zealand and around the world. Our task was to create content for their social channels during and beyond the event. If UX is your thing, then this event is not to be missed! www.uxnewzealand.com')
-		servicesPage.videoButton('ux_section', 'https://www.youtube.com/watch?v=OsltYGFoZp4')
+		servicesPage.videoButton('ux_section', 'left', 'OsltYGFoZp4')
 
 		homePage.addGrid('pepsi_section')
 		homePage.addImage('pepsi_section', 'left', 'http://icons.iconarchive.com/icons/michael/coke-pepsi/512/Pepsi-Can-icon.png')
-		homePage.addText('pepsi_section', 'right', 'Pepsi New Zealand', 'In conjunction with Pepsi and the team at Brand Spanking we brought the future back to Wellington. To celebrate the 21st of October 2015 Pepsi New Zealand screened Back to the Future 2. On the 21st of October 2015, the very same date the DeLorean traveled forward in time to!')
+		homePage.addText('pepsi_section', 'right', 'Pepsi New Zealand', 'In conjunction with Pepsi and the team at Brand Spanking, we brought the future back to Wellington. To celebrate the 21st of October 2015, Pepsi New Zealand screened Back to the Future 2. On the 21st of October 2015, the very same date the DeLorean traveled forward in time to!')
 		
 		homePage.addGrid('trustpower_section')
 		homePage.addImage('trustpower_section', 'right', 'imgs/trustpower.jpg')
-		homePage.addText('trustpower_section', 'left', 'Trust Power', 'Trustpower approached us early in 2015 to create a campaign with the objective to acquire an owned database that they could contact in future and to generate reach and brand awareness</br>We built them a mobile friendly Facebook app and directed users to the page through targeted Facebook advertising.</br></br>Through a mixture of boosted Facebook page posts and Facebook ads that directed users straight to the app, we reached over 860,000 people within the target demographic.')
+		homePage.addText('trustpower_section', 'left', 'Trust Power', 'Trustpower approached us early in 2015 to create a campaign with the objective to acquire an owned database that they could contact in future, ultimately generating reach and brand awareness.</br>We built them a mobile friendly Facebook app and directed users to the page through targeted Facebook advertising.</br></br>Through a mixture of boosted Facebook page posts and Facebook ads that directed users straight to the app, we reached over 860,000 people within the target demographic.')
 
 		homePage.addGrid('mountaindew_section')
 		homePage.addImage('mountaindew_section', 'left', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mountain_Dew_logo.svg/2000px-Mountain_Dew_logo.svg.png')
@@ -148,7 +148,7 @@ $(document).ready(function(){
 		homePage.setupSection('virtual_reality_section', 'homepage_double_grid')
 		homePage.addGrid('virtual_reality_section')
 		homePage.addImage('virtual_reality_section', 'left', 'http://south.io/wp-content/uploads/2015/12/OculusRift.png')
-		homePage.addText('virtual_reality_section', 'right', 'VR Studios', 'Welcome to the VR Studio of TAG the agency. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</br></br>From Oculus Rift, to 360-degree video, to hologram technology; the VR Studio collaborates with the best and brightest in the industry to provide a complete solution for your brand in this new and innovate space of advertising</br></br>Get in touch today; we\'d love to help bring your brand to life, truly, from virtual to the real world!')
+		homePage.addText('virtual_reality_section', 'right', 'VR Studios', 'Welcome to the VR Studio of TAG the agency. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</br></br>From Oculus Rift, to 360-degree video, to hologram technology; the VR Studio collaborates with the best and brightest in the industry to provide a complete solution for your brand in this new and innovative space of advertising</br></br>Get in touch today; we\'d love to help bring your brand to life, truly, from virtual to the real world!')
 	}
 
 

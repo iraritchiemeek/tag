@@ -28,7 +28,7 @@ function ServicesPage (homePage) {
 	var videos = {text: {
 			position: 'right',
 			title: 'Videos',
-			text: 'Video and social media go together like marmite and cheese in a school lunch box. Naturally, TAG has the ability to shoot, direct and produce video content for social media channels, weather it\'s on our own in house green screen or somewhere in the field!</br>The only limit is your imagination!'
+			text: 'Video and social media go together like marmite and cheese in a school lunch box. Naturally, TAG has the ability to shoot, direct and produce video content for social media channels, whether it\'s on our own in-house green screen or somewhere in the field!</br>The only limit is your imagination!'
 		},
 		image: {
 			position: 'left',
@@ -115,6 +115,7 @@ ServicesPage.prototype.changeSlide = function(button_id) {
 	this.delayTime += 8000
 };
 
-ServicesPage.prototype.videoButton = function(target, url) {
-	$('#' + target).append('<div id="services_video_popout" data-url="' + url + '"></div>')
+ServicesPage.prototype.videoButton = function(target, position, id) {
+	// $('#' + target + '_' + position).append('<div class="services_video_button" data-video_id="' + id + '">Video</div>')
+	$('#' + target).append('<div class="services_video_button" data-video_id="' + id + '"><div class="services_video_button_text">Video</div></div>')
 };
