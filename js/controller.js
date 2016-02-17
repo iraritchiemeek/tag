@@ -50,6 +50,7 @@ $(document).ready(function(){
 
 		$('#container').on('click', '.services_video_button', function (e) {
 			console.log(e.currentTarget.dataset.video_id)
+			servicesPage.showVideoPopout()
 		})
 
 	}

@@ -120,5 +120,13 @@ ServicesPage.prototype.videoButton = function(target, position, id) {
 };
 
 ServicesPage.prototype.videoPlayer = function() {
-	$('#container').append('<div id="services_video_player"></div>')
+	$('#container').append('<div id="services_video_player"><div id="video_player_close">X</div></div>')
+};
+
+ServicesPage.prototype.showVideoPopout = function() {
+	$('#services_video_player').show()
+};
+
+ServicesPage.prototype.hideVideoPopout = function() {
+	$('#services_video_player').hide()
 };
