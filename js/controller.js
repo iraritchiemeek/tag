@@ -129,14 +129,17 @@ $(document).ready(function(){
 		homePage.addGrid('pepsi_section')
 		homePage.addImage('pepsi_section', 'left', 'http://icons.iconarchive.com/icons/michael/coke-pepsi/512/Pepsi-Can-icon.png')
 		homePage.addText('pepsi_section', 'right', 'Pepsi New Zealand', 'In conjunction with Pepsi and the team at Brand Spanking, we brought the future back to Wellington. To celebrate the 21st of October 2015, Pepsi New Zealand screened Back to the Future 2. On the 21st of October 2015, the very same date the DeLorean traveled forward in time to!')
+		servicesPage.videoButton('pepsi_section', 'right', 'OsltYGFoZp4')
 		
 		homePage.addGrid('trustpower_section')
 		homePage.addImage('trustpower_section', 'right', 'imgs/trustpower.jpg')
 		homePage.addText('trustpower_section', 'left', 'Trust Power', 'Trustpower approached us early in 2015 to create a campaign with the objective to acquire an owned database that they could contact in future, ultimately generating reach and brand awareness.</br>We built them a mobile friendly Facebook app and directed users to the page through targeted Facebook advertising.</br></br>Through a mixture of boosted Facebook page posts and Facebook ads that directed users straight to the app, we reached over 860,000 people within the target demographic.')
+		servicesPage.videoButton('trustpower_section', 'left', 'OsltYGFoZp4')
 
 		homePage.addGrid('mountaindew_section')
 		homePage.addImage('mountaindew_section', 'left', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mountain_Dew_logo.svg/2000px-Mountain_Dew_logo.svg.png')
 		homePage.addText('mountaindew_section', 'right', 'Mountain Dew', 'TAG built a Facebook app, which was designed to engage with fans and inspire them to share the action sports they love. The app gave participants the chance to win a GoPro Hero 4 with a clever little lid that fits on your Mountain Dew bottle and doubles as a mount for your GoPro.')
+		servicesPage.videoButton('mountaindew_section', 'right', 'OsltYGFoZp4')
 
 
 	}
