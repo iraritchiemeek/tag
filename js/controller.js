@@ -53,6 +53,10 @@ $(document).ready(function(){
 			servicesPage.showVideoPopout()
 		})
 
+		$('#container').on('click', '#video_player_close', function () {
+			servicesPage.hideVideoPopout()
+		})
+
 	}
 
 	function loadHomePage () {
