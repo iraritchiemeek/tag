@@ -44,13 +44,12 @@ $(document).ready(function(){
 			loadVirtualRealityPage()
 		})
 
-		// $('#contact_menu_item').on('click', function(e) {
-		// 	e.preventDefault()
-		// 	window.location.replace('mailto:address@gmail.com&subject=Hello there')
-		// })
-
 		$('#container').on('click', '.services_toggle_buttons' , function(e) {
 			servicesPage.changeSlide(e.target.id.split('_services_button')[0])
+		})
+
+		$('#container').on('click', '.services_video_button', function (e) {
+			console.log(e.currentTarget.dataset.video_id)
 		})
 
 	}
@@ -107,10 +106,11 @@ $(document).ready(function(){
 		$('#content').empty()
 		window.location.hash = 'services';
 		servicesPage.setupSection('services_carousel')
-		homePage.setupSection('ux_section', 'homepage_double_grid')
-		homePage.setupSection('pepsi_section', 'homepage_double_grid')
-		homePage.setupSection('trustpower_section', 'homepage_double_grid')
 		homePage.setupSection('mountaindew_section', 'homepage_double_grid')
+		homePage.setupSection('ux_section', 'homepage_double_grid')
+		homePage.setupSection('trustpower_section', 'homepage_double_grid')
+		homePage.setupSection('pepsi_section', 'homepage_double_grid')
+		servicesPage.videoPlayer()
 
 
 		servicesPage.servicesButtonsWrapper('services_carousel')
@@ -134,12 +134,10 @@ $(document).ready(function(){
 		homePage.addGrid('trustpower_section')
 		homePage.addImage('trustpower_section', 'right', 'imgs/trustpower.jpg')
 		homePage.addText('trustpower_section', 'left', 'Trust Power', 'Trustpower approached us early in 2015 to create a campaign with the objective to acquire an owned database that they could contact in future, ultimately generating reach and brand awareness.</br>We built them a mobile friendly Facebook app and directed users to the page through targeted Facebook advertising.</br></br>Through a mixture of boosted Facebook page posts and Facebook ads that directed users straight to the app, we reached over 860,000 people within the target demographic.')
-		servicesPage.videoButton('trustpower_section', 'left', 'OsltYGFoZp4')
 
 		homePage.addGrid('mountaindew_section')
 		homePage.addImage('mountaindew_section', 'left', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mountain_Dew_logo.svg/2000px-Mountain_Dew_logo.svg.png')
 		homePage.addText('mountaindew_section', 'right', 'Mountain Dew', 'TAG built a Facebook app, which was designed to engage with fans and inspire them to share the action sports they love. The app gave participants the chance to win a GoPro Hero 4 with a clever little lid that fits on your Mountain Dew bottle and doubles as a mount for your GoPro.')
-		servicesPage.videoButton('mountaindew_section', 'right', 'OsltYGFoZp4')
 
 
 	}

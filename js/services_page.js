@@ -118,3 +118,7 @@ ServicesPage.prototype.changeSlide = function(button_id) {
 ServicesPage.prototype.videoButton = function(target, position, id) {
 	$('#' + target).append('<div class="services_video_button" data-video_id="' + id + '"><div class="services_video_button_text">Click to see the Video</div></div>')
 };
+
+ServicesPage.prototype.videoPlayer = function() {
+	$('#container').append('<div id="services_video_player"></div>')
+};

@@ -113,6 +113,7 @@ html, body, #container, #content{
 	left:50%;
 	padding: 1em;
 	overflow-y:auto;
+	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 	display: inline-block;
 	position: relative;
@@ -136,6 +137,7 @@ html, body, #container, #content{
 	left:50%;
 	padding: 1em;
 	overflow-y:auto;
+	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 	position: relative;
 	top: 55%;
@@ -205,6 +207,7 @@ html, body, #container, #content{
 	max-width:50%;
 	max-height:90%;
 	overflow-y:auto;
+	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 }
 
@@ -222,6 +225,8 @@ html, body, #container, #content{
 }
 
 .services_video_button {
+	cursor: pointer; 
+	cursor: hand;
 	border: 1px solid black;
 	width: 15%;
 	height: 1%;
@@ -230,8 +235,8 @@ html, body, #container, #content{
 	border-radius: 3px;
 	position: relative;
 	padding: 1em;
+-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
-	/*background-color: rgb(240, 222, 15);*/
 	color: black;
 }
 
@@ -242,8 +247,21 @@ html, body, #container, #content{
 	left:50%;
 	top: 50%;
 	padding: 1em;
+	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 	position: absolute;
+}
+
+#services_video_player {
+	background-color: black;
+	width: 80%;
+	height: 60%;
+	left:50%;
+	top: 50%;
+	padding: 1em;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	position: fixed;
 }
 
 
@@ -262,6 +280,7 @@ and (orientation : portrait) {
 		top: 50%;
 		padding: 1em;
 		overflow-y: auto;
+		-webkit-transform: translate(-50%,-50%);
 		transform: translate(-50%,-50%);
 	}
 
