@@ -119,7 +119,7 @@ ServicesPage.prototype.videoButton = function(target, position, id) {
 	$('#' + target).append('<div class="services_video_button" data-video_id="' + id + '"><div class="services_video_button_text">Click to see the Video</div></div>')
 };
 
-ServicesPage.prototype.videoPlayer = function() {
+ServicesPage.prototype.appendVideoPlayer = function() {
 	$('#container').append('<div id="services_video_player"><div id="video_player_close">X</div></div>')
 };
 
@@ -128,5 +128,17 @@ ServicesPage.prototype.showVideoPopout = function() {
 };
 
 ServicesPage.prototype.hideVideoPopout = function() {
-	$('#services_video_player').hide()
+	$('#services_video_player').remove()
+};
+
+ServicesPage.prototype.loadVideo = function(id) {
+	$('#services_video_player').append('<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1"></iframe>')
+};
+
+ServicesPage.prototype.dimBackground = function() {
+	$('#container').append('<div id="dim_background"></div>')
+};
+
+ServicesPage.prototype.removeDimBackground = function() {
+	$('#dim_background').remove()
 };

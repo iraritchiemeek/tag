@@ -49,11 +49,14 @@ $(document).ready(function(){
 		})
 
 		$('#container').on('click', '.services_video_button', function (e) {
-			console.log(e.currentTarget.dataset.video_id)
+			servicesPage.appendVideoPlayer()
+			servicesPage.dimBackground()
+			servicesPage.loadVideo(e.currentTarget.dataset.video_id)
 			servicesPage.showVideoPopout()
 		})
 
 		$('#container').on('click', '#video_player_close', function () {
+			servicesPage.removeDimBackground()
 			servicesPage.hideVideoPopout()
 		})
 
@@ -115,7 +118,6 @@ $(document).ready(function(){
 		homePage.setupSection('ux_section', 'homepage_double_grid')
 		homePage.setupSection('trustpower_section', 'homepage_double_grid')
 		homePage.setupSection('pepsi_section', 'homepage_double_grid')
-		servicesPage.videoPlayer()
 
 
 		servicesPage.servicesButtonsWrapper('services_carousel')
@@ -134,7 +136,7 @@ $(document).ready(function(){
 		homePage.addGrid('pepsi_section')
 		homePage.addImage('pepsi_section', 'left', 'http://icons.iconarchive.com/icons/michael/coke-pepsi/512/Pepsi-Can-icon.png')
 		homePage.addText('pepsi_section', 'right', 'Pepsi New Zealand', 'In conjunction with Pepsi and the team at Brand Spanking, we brought the future back to Wellington. To celebrate the 21st of October 2015, Pepsi New Zealand screened Back to the Future 2. On the 21st of October 2015, the very same date the DeLorean traveled forward in time to!')
-		servicesPage.videoButton('pepsi_section', 'right', 'OsltYGFoZp4')
+		servicesPage.videoButton('pepsi_section', 'right', 'BxQt03tX2qY')
 		
 		homePage.addGrid('trustpower_section')
 		homePage.addImage('trustpower_section', 'right', 'imgs/trustpower.jpg')
@@ -143,7 +145,6 @@ $(document).ready(function(){
 		homePage.addGrid('mountaindew_section')
 		homePage.addImage('mountaindew_section', 'left', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mountain_Dew_logo.svg/2000px-Mountain_Dew_logo.svg.png')
 		homePage.addText('mountaindew_section', 'right', 'Mountain Dew', 'TAG built a Facebook app, which was designed to engage with fans and inspire them to share the action sports they love. The app gave participants the chance to win a GoPro Hero 4 with a clever little lid that fits on your Mountain Dew bottle and doubles as a mount for your GoPro.')
-
 
 	}
 
