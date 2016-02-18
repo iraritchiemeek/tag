@@ -60,6 +60,10 @@ $(document).ready(function(){
 			servicesPage.hideVideoPopout()
 		})
 
+		$('#container').on('click', '#trends_button', function () {
+			window.open('http://www.trends.tagtheagency.com/')
+		})
+
 	}
 
 	function loadHomePage () {
@@ -108,6 +112,8 @@ $(document).ready(function(){
 		homePage.addGrid('trends_section')
 		homePage.addImage('trends_section', 'right', 'imgs/yellow_carousel.gif')
 		homePage.addText('trends_section', 'left', 'Trends', 'The world of social media is fast becoming video based and at TAG we love to create videos designed for the social media space!<br><br>This page brings you the latest trending videos from around the world, automatically pulling the top trending clips from Vine, YouTube and Reddit. We hope you enjoy!')
+		homePage.addTrendsButton()
+
 	}
 
 	function loadServicesPage () {

@@ -34,15 +34,15 @@ HomePage.prototype.addThinkDoReviewCopy = function(title, copy) {
 	$('#TDR_accordian').append('<div class="TDR_section" id="' + title + '_section">' + copy + '</div>')
 };
 
+HomePage.prototype.addTrendsButton = function() {
+	$('#trends_section').append('<div id="trends_button"><div id="trends_button_text">Click to see the Trends</div></div>')
+};
+
 HomePage.prototype.displayThinkDoReviewSection = function(section) {
 	$('.TDR_section').fadeOut()
 	$('#' + section + '_section').fadeIn()
 	$('.TDR_toggle').removeClass('active_TDR')
 	$('#' + section + '_toggle').addClass('active_TDR')
-};
-
-HomePage.prototype.appendTrendsButton = function() {
-	$('#trends_section_left').append('<div id="trends_button">CLICK TO SEE THE TRENDS</div>')
 };
 
 HomePage.prototype.autoChangeTDR = function() {

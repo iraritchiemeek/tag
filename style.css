@@ -240,7 +240,7 @@ html, body, #container, #content{
 	color: black;
 }
 
-.services_video_button_text {
+#services_video_button_text {
 	font-size: 1.3vw;
 	width: 100%;
 	text-align: center;
@@ -288,6 +288,34 @@ html, body, #container, #content{
 	width: 100%;
 	background-color: black;
 	opacity: 0.7;
+}
+
+#trends_button {
+	cursor: pointer; 
+	cursor: hand;
+	border: 1px solid black;
+	width: 15%;
+	height: 1%;
+	top: 85%;
+	left:50%;
+	border-radius: 3px;
+	position: relative;
+	padding: 1em;
+   	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	color: black;
+}
+
+#trends_button_text {
+	font-size: 1.3vw;
+	width: 100%;
+	text-align: center;
+	left:50%;
+	top: 50%;
+	padding: 1em;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	position: absolute;
 }
 /*------------------------SERVICES PAGE ENDS------------------------------*/
 
