@@ -2,6 +2,7 @@ function ServicesPage (homePage) {
 
 	this.homePage = homePage
 	this.targetDiv = 'services_carousel'
+	this.tdr_active = false
 
 	var research = {text: {
 			position: 'right',
@@ -71,7 +72,6 @@ ServicesPage.prototype.servicesToggleButton = function(targetDiv, id) {
 
 ServicesPage.prototype.refreshServiceSections = function() {
 	$('#services_carousel_left, #services_carousel_right').remove()
-	// $('#services_carousel_left, #services_carousel_right').css({'backgroundImage':''})
 	this.homePage.addGrid(this.targetDiv)
 };
 
@@ -79,6 +79,7 @@ ServicesPage.prototype.autoChangeServices = function() {
 	var self = this
 	var index = 0
 	this.delayTime = 0
+	this.tdr_active = true
 
 	loopCarousel()
 	function loopCarousel() {
@@ -92,13 +93,14 @@ ServicesPage.prototype.autoChangeServices = function() {
 					return
 				}
 			}, self.delayTime)
-				self.delayTime += 8000;
+				self.delayTime += 12000;
 		})
 		setTimeout(loopCarousel, 0)
 	}
 };
 
 ServicesPage.prototype.loadSlide = function(slide) {
+	console.log(this.targetDiv)
 	this.highlightButton(slide.text.title.toLowerCase())
 	this.homePage.addImage(this.targetDiv, slide.image.position, slide.image.url)
 	this.homePage.addText(this.targetDiv, slide.text.position, slide.text.title, slide.text.text)

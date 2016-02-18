@@ -132,7 +132,12 @@ $(document).ready(function(){
 		servicesPage.servicesToggleButton('services_carousel', 'videos')
 		servicesPage.servicesToggleButton('services_carousel', 'campaigns_and_creative')
 	
-		servicesPage.autoChangeServices()
+		if (servicesPage.tdr_active === false) {
+			servicesPage.autoChangeServices()
+		} else {
+			servicesPage.refreshServiceSections()
+			servicesPage.loadSlide(servicesPage.services['research'])
+		}
 
 		homePage.addGrid('ux_section')
 		homePage.addImage('ux_section', 'right', 'http://www.uxnewzealand.com/img/uxnz-logo.png')

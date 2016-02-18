@@ -140,7 +140,7 @@ html, body, #container, #content{
 	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 	position: relative;
-	top: 55%;
+	top: 60%;
 	text-align: left;
 	margin-left: 20%;
 }
