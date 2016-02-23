@@ -114,11 +114,17 @@ $(document).ready(function(){
 		homePage.addText('trends_section', 'left', 'Trends', 'The world of social media is fast becoming video based and at TAG we love to create videos designed for the social media space!<br><br>This page brings you the latest trending videos from around the world, automatically pulling the top trending clips from Vine, YouTube and Reddit. We hope you enjoy!')
 		homePage.addTrendsButton()
 
+		homePage.socialMediaWrapper()
+		homePage.socialMediaIcon('./imgs/twitter.svg', 'https://www.instagram.com/tagtheagency/')
+		homePage.socialMediaIcon('./imgs/facebook.svg', 'https://www.facebook.com/TAGtheagency/?fref=ts')
+		homePage.socialMediaIcon('./imgs/insta.svg', 'https://twitter.com/TAGtheagency')
+
 	}
 
 	function loadServicesPage () {
 		$('#content').empty()
 		window.location.hash = 'services';
+		window.scrollTo(0, 0)
 		servicesPage.setupSection('services_carousel')
 		homePage.setupSection('mountaindew_section', 'homepage_double_grid')
 		homePage.setupSection('ux_section', 'homepage_double_grid')

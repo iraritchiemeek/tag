@@ -60,3 +60,10 @@ HomePage.prototype.autoChangeTDR = function() {
 	}, 10000)
 };
 
+HomePage.prototype.socialMediaWrapper = function() {
+	$('#content').append('<div id="social_media_wrapper"><div id="icons_wrapper"></div></div>')
+};
+
+HomePage.prototype.socialMediaIcon = function(img, url) {
+	$('#icons_wrapper').append('<a href="' + url + '"><img class="social_media_icon" src="' + img + '"></a>')
+};

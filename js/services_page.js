@@ -95,7 +95,7 @@ ServicesPage.prototype.autoChangeServices = function() {
 			}, self.delayTime)
 				self.delayTime += 12000;
 		})
-		setTimeout(loopCarousel, 0)
+		// setTimeout(loopCarousel, 0)
 	}
 };
 
