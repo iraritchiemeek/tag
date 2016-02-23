@@ -11,6 +11,8 @@ $(document).ready(function(){
 		var page = window.location.hash
 		if (page === '#services') {
 			loadServicesPage()
+		} else if (page === '#virtual-reality') {
+			loadVirtualRealityPage()
 		} else {
 			loadHomePage()
 		}
@@ -20,31 +22,51 @@ $(document).ready(function(){
 		var headerMenu = new HeaderMenu()
 		headerMenu.menuItem("HOME", "tagtheagency.com")
 		headerMenu.menuItem("SERVICES")
-		headerMenu.menuItem("TRENDS", "trends.tagtheagency.com")
+		headerMenu.menuItem("TRENDS", "http://www.trends.tagtheagency.com")
 		headerMenu.menuItem("VIRTUAL REALITY")
-		headerMenu.menuItem("TALENT ARMY")
-		headerMenu.menuItem("CONTACT")
+		// headerMenu.menuItem("INFLUENCES")
+		headerMenu.menuItem("CONTACT", "mailto:hello@tagtheagency.com")
 	}
 
 	function eventListeners () {
-		$('#services_menu_item').on('click', function (e) {
+		$('#services_menu_item').on('click', function(e) {
 			e.preventDefault()
 			loadServicesPage()
 		})
 
-		$('#home_menu_item').on('click', function (e) {
+		$('#home_menu_item').on('click', function(e) {
 			e.preventDefault()
 			loadHomePage()
 		})
 
-		$('#virtual_reality_menu_item').on('click', function (e) {
+		$('#virtual_reality_menu_item').on('click', function(e) {
 			e.preventDefault()
 			loadVirtualRealityPage()
 		})
+
+		$('#container').on('click', '.services_toggle_buttons' , function(e) {
+			servicesPage.changeSlide(e.target.id.split('_services_button')[0])
+		})
+
+		$('#container').on('click', '.services_video_button', function (e) {
+			servicesPage.appendVideoPlayer()
+			servicesPage.dimBackground()
+			servicesPage.loadVideo(e.currentTarget.dataset.video_id)
+			servicesPage.showVideoPopout()
+		})
+
+		$('#container').on('click', '#video_player_close', function () {
+			servicesPage.removeDimBackground()
+			servicesPage.hideVideoPopout()
+		})
+
+		$('#container').on('click', '#trends_button', function () {
+			window.open('http://www.trends.tagtheagency.com/')
+		})
+
 	}
 
 	function loadHomePage () {
-		clearInterval(servicesPage.services_interval)
 		$('#content').empty()
 		window.location.hash = '';
 
@@ -65,7 +87,7 @@ $(document).ready(function(){
 
 		homePage.addGrid('wanna_play_section')
 		homePage.addImage('wanna_play_section', 'right', 'imgs/yellow_table.gif')
-		homePage.addText('wanna_play_section', 'left', 'Wanna play?', 'What we do - think, create, do, live, love and breathe social media.Sure, we can look after your social channels, post content daily and all of that, but where we thrive is in the innovation and creative games of social media. We push the boundaries, we create campaigns that excite, inspire and entertain.')
+		homePage.addText('wanna_play_section', 'left', 'Wanna play?', 'What we do - think, create, do, live, love and breathe social media. Sure, we can look after your social channels, post content daily and all of that, but where we thrive is in the innovation and creative games of social media. We push the boundaries, we create campaigns that excite, inspire and entertain.')
 
 		homePage.addGrid('our_approach_section')
 		homePage.addImage('our_approach_section', 'left', 'imgs/white_motorbike.gif')
@@ -89,34 +111,58 @@ $(document).ready(function(){
 
 		homePage.addGrid('trends_section')
 		homePage.addImage('trends_section', 'right', 'imgs/yellow_carousel.gif')
-		homePage.addText('trends_section', 'left', 'Trends', 'The world of social media is fast becoming video based and at TAG we love to create videos designed for the social media space!<br><br>This page brings you the latest trending videos from around the world, automatically pulling the top trending clips from Vine, YouTube and Reddit, we hope you enjoy!')
+		homePage.addText('trends_section', 'left', 'Trends', 'The world of social media is fast becoming video based and at TAG we love to create videos designed for the social media space!<br><br>This page brings you the latest trending videos from around the world, automatically pulling the top trending clips from Vine, YouTube and Reddit. We hope you enjoy!')
+		homePage.addTrendsButton()
+
+		homePage.socialMediaWrapper()
+		homePage.socialMediaIcon('./imgs/twitter.svg', 'https://www.instagram.com/tagtheagency/')
+		homePage.socialMediaIcon('./imgs/facebook.svg', 'https://www.facebook.com/TAGtheagency/?fref=ts')
+		homePage.socialMediaIcon('./imgs/insta.svg', 'https://twitter.com/TAGtheagency')
+
 	}
 
 	function loadServicesPage () {
 		$('#content').empty()
 		window.location.hash = 'services';
+		window.scrollTo(0, 0)
 		servicesPage.setupSection('services_carousel')
+		homePage.setupSection('mountaindew_section', 'homepage_double_grid')
+		homePage.setupSection('ux_section', 'homepage_double_grid')
+		homePage.setupSection('trustpower_section', 'homepage_double_grid')
+		homePage.setupSection('pepsi_section', 'homepage_double_grid')
+
+
 		servicesPage.servicesButtonsWrapper('services_carousel')
 		servicesPage.servicesToggleButton('services_carousel', 'research')
 		servicesPage.servicesToggleButton('services_carousel', 'strategy')
-		servicesPage.servicesToggleButton('services_carousel', 'campaigns_creative')
-		servicesPage.servicesToggleButton('services_carousel', 'video')
-
-		homePage.addGrid('services_carousel')
-		homePage.addImage('services_carousel', 'left', 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383')
-		homePage.addText('services_carousel', 'right', 'Research', 'We watch to see what the competition is doing; researching the competitive playing field that is your marker and equipping you and your team with the information and knowledge you need. If you\'re new to social media or already up and running, knowledge is power, power to win!')
+		servicesPage.servicesToggleButton('services_carousel', 'videos')
+		servicesPage.servicesToggleButton('services_carousel', 'campaigns_and_creative')
 	
-		var target = 'services_carousel'
+		if (servicesPage.tdr_active === false) {
+			servicesPage.autoChangeServices()
+		} else {
+			servicesPage.refreshServiceSections()
+			servicesPage.loadSlide(servicesPage.services['research'])
+		}
 
-		var research_text = [target, 'right', 'Research', 'We watch to see what the competition is doing; researching the competitive playing field that is your marker and equipping you and your team with the information and knowledge you need. If you\'re new to social media or already up and running, knowledge is power, power to win!']
-		var research_image = [target, 'left', 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383']
-	
-		var strategy_text = [target, 'left', 'Strategy', 'Developing a plan to win, not just for the first game, but also for future games. No professional game is won without a strong, tested and well thought out strategy. <br/> At TAG we have a diverse team of experts in the social media space, with deep understanding of branding, strategy and how to pull it all together through creative processes and social innovation. Beyond just marketing, we will dive into the depths of your brands culture, inspiring and invigorating your team.']
-		var strategy_image = [target, 'right', 'http://blogs-images.forbes.com/clareoconnor/files/2015/03/iwatch_retailers_retale-e1426179110683.png']
+		homePage.addGrid('ux_section')
+		homePage.addImage('ux_section', 'right', 'http://www.uxnewzealand.com/img/uxnz-logo.png')
+		homePage.addText('ux_section', 'left', 'UX New Zealand', 'At the end of 2015 we had the privilege of working with the team at UX New Zealand at their annual conference. It was an amazing two-day event, which shared and showcased the best of usability from New Zealand and around the world. Our task was to create content for their social channels during and beyond the event. If UX is your thing, then this event is not to be missed! www.uxnewzealand.com')
+		servicesPage.videoButton('ux_section', 'left', 'OsltYGFoZp4')
+
+		homePage.addGrid('pepsi_section')
+		homePage.addImage('pepsi_section', 'left', 'http://icons.iconarchive.com/icons/michael/coke-pepsi/512/Pepsi-Can-icon.png')
+		homePage.addText('pepsi_section', 'right', 'Pepsi New Zealand', 'In conjunction with Pepsi and the team at Brand Spanking, we brought the future back to Wellington. To celebrate the 21st of October 2015, Pepsi New Zealand screened Back to the Future 2. On the 21st of October 2015, the very same date the DeLorean traveled forward in time to!')
+		servicesPage.videoButton('pepsi_section', 'right', 'BxQt03tX2qY')
 		
-		var videos_text = [target, 'right', 'Video Production', 'Video and social media go together like marmite and cheese in a school lunch box. Naturally, TAG has the ability to shoot, direct and produce video content for social media channels, weather it’s on our own in house green screen or somewhere in the field!</br>The only limit is your imagination!']
-		var videos_image = [target, 'left', 'http://www.officialpsds.com/images/thumbs/Canon-Camera-with-Color-Lense-psd75638.png']
-		servicesPage.autoChangeServices([[research_text, research_image], [strategy_text, strategy_image], [videos_text, videos_image]], homePage)
+		homePage.addGrid('trustpower_section')
+		homePage.addImage('trustpower_section', 'right', 'imgs/trustpower.jpg')
+		homePage.addText('trustpower_section', 'left', 'Trust Power', 'Trustpower approached us early in 2015 to create a campaign with the objective to acquire an owned database that they could contact in future, ultimately generating reach and brand awareness.</br>We built them a mobile friendly Facebook app and directed users to the page through targeted Facebook advertising.</br></br>Through a mixture of boosted Facebook page posts and Facebook ads that directed users straight to the app, we reached over 860,000 people within the target demographic.')
+
+		homePage.addGrid('mountaindew_section')
+		homePage.addImage('mountaindew_section', 'left', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mountain_Dew_logo.svg/2000px-Mountain_Dew_logo.svg.png')
+		homePage.addText('mountaindew_section', 'right', 'Mountain Dew', 'TAG built a Facebook app, which was designed to engage with fans and inspire them to share the action sports they love. The app gave participants the chance to win a GoPro Hero 4 with a clever little lid that fits on your Mountain Dew bottle and doubles as a mount for your GoPro.')
+
 	}
 
 	function loadVirtualRealityPage () {
@@ -125,9 +171,10 @@ $(document).ready(function(){
 
 		homePage.setupSection('virtual_reality_section', 'homepage_double_grid')
 		homePage.addGrid('virtual_reality_section')
-		// homePage.addImage('virtual_reality_section', 'left', 'http://store.storeimages.cdn-apple.com/8726/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone6s/scene0/iphone6s-scene0?wid=400&hei=650&fmt=png-alpha&qlt=95&.v=1441818720383')
-		homePage.addText('virtual_reality_section', 'right', 'VR Studios', 'Welcome to the VR Studio of TAG the agency. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</br>From Oculus Rift, to 360-degree video, to hologram technology; the VR Studio collaborates with the best and brightest in the industry to provide a complete solution for your brand in this new and innovate space of advertising')
+		homePage.addImage('virtual_reality_section', 'left', 'http://south.io/wp-content/uploads/2015/12/OculusRift.png')
+		homePage.addText('virtual_reality_section', 'right', 'VR Studios', 'Welcome to the VR Studio of TAG the agency. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</br></br>From Oculus Rift, to 360-degree video, to hologram technology; the VR Studio collaborates with the best and brightest in the industry to provide a complete solution for your brand in this new and innovative space of advertising</br></br>Get in touch today; we\'d love to help bring your brand to life, truly, from virtual to the real world!')
 	}
+
 
 
 })

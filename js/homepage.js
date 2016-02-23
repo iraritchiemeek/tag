@@ -34,15 +34,15 @@ HomePage.prototype.addThinkDoReviewCopy = function(title, copy) {
 	$('#TDR_accordian').append('<div class="TDR_section" id="' + title + '_section">' + copy + '</div>')
 };
 
+HomePage.prototype.addTrendsButton = function() {
+	$('#trends_section').append('<div id="trends_button"><div id="trends_button_text">Click to see the Trends</div></div>')
+};
+
 HomePage.prototype.displayThinkDoReviewSection = function(section) {
 	$('.TDR_section').fadeOut()
 	$('#' + section + '_section').fadeIn()
 	$('.TDR_toggle').removeClass('active_TDR')
 	$('#' + section + '_toggle').addClass('active_TDR')
-};
-
-HomePage.prototype.appendTrendsButton = function() {
-	$('#trends_section_left').append('<div id="trends_button">CLICK TO SEE THE TRENDS</div>')
 };
 
 HomePage.prototype.autoChangeTDR = function() {
@@ -54,10 +54,16 @@ HomePage.prototype.autoChangeTDR = function() {
 			index += 1
 			self.displayThinkDoReviewSection(TDR[index])
 		} else {
-			console.log(index)
 			index = 0
 			self.displayThinkDoReviewSection(TDR[0])
 		}
 	}, 10000)
 };
 
+HomePage.prototype.socialMediaWrapper = function() {
+	$('#content').append('<div id="social_media_wrapper"><div id="icons_wrapper"></div></div>')
+};
+
+HomePage.prototype.socialMediaIcon = function(img, url) {
+	$('#icons_wrapper').append('<a href="' + url + '"><img class="social_media_icon" src="' + img + '"></a>')
+};
