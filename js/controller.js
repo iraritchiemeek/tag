@@ -105,6 +105,7 @@ $(document).ready(function(){
 			homePage.displayThinkDoReviewSection($(e.target)[0].innerHTML.toLowerCase())			
 		})
 
+
 		homePage.addGrid('team_section')
 		homePage.addImage('team_section', 'left', 'imgs/team.png')
 		homePage.addText('team_section', 'right', 'The Team', 'The team at TAG is made up of a unique combination of talented individuals, each bringing depth and experience to the social media industry.')
@@ -115,9 +116,10 @@ $(document).ready(function(){
 		homePage.addTrendsButton()
 
 		homePage.socialMediaWrapper()
+		homePage.socialMediaText('Social Media Specialists')
 		homePage.socialMediaIcon('./imgs/twitter.svg', 'https://www.instagram.com/tagtheagency/')
-		homePage.socialMediaIcon('./imgs/facebook.svg', 'https://www.facebook.com/TAGtheagency/?fref=ts')
 		homePage.socialMediaIcon('./imgs/insta.svg', 'https://twitter.com/TAGtheagency')
+		homePage.socialMediaIcon('./imgs/facebook.svg', 'https://www.facebook.com/TAGtheagency/?fref=ts')
 
 	}
 

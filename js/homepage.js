@@ -67,3 +67,7 @@ HomePage.prototype.socialMediaWrapper = function() {
 HomePage.prototype.socialMediaIcon = function(img, url) {
 	$('#icons_wrapper').append('<a href="' + url + '"><img class="social_media_icon" src="' + img + '"></a>')
 };
+
+HomePage.prototype.socialMediaText = function(text) {
+	$('#social_media_wrapper').append('<div id="social_media_text">' + text + '</div>')
+};
