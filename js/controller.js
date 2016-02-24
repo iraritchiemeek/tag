@@ -116,7 +116,7 @@ $(document).ready(function(){
 		homePage.addTrendsButton()
 
 		homePage.socialMediaWrapper()
-		homePage.socialMediaText('Social Media Specialists')
+		homePage.socialMediaText('Specialists in Social Media')
 		homePage.socialMediaIcon('./imgs/twitter.svg', 'https://www.instagram.com/tagtheagency/')
 		homePage.socialMediaIcon('./imgs/insta.svg', 'https://twitter.com/TAGtheagency')
 		homePage.socialMediaIcon('./imgs/facebook.svg', 'https://www.facebook.com/TAGtheagency/?fref=ts')
