@@ -106,9 +106,11 @@ html, body, #container, #content{
 	height: 15%;
 	position: absolute;
 	background-color: #F0DE0F;
+	overflow: hidden;
 }
 
 #icons_wrapper {
+	overflow-y: hidden !important;
 	display: inline-block;
 	height: 100%;
 	width: 20%;
@@ -122,12 +124,14 @@ html, body, #container, #content{
 }
 
 .social_media_icon {
+	overflow: hidden;
 	width: 25%;
 	height: 100%;
   	margin: 0 4%;
 }
 
 #social_media_text {
+	overflow: hidden;
 	left: 15%;
 	top: 25%;
 	display: inline-block;
@@ -352,6 +356,10 @@ html, body, #container, #content{
 	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 	position: absolute;
+}
+
+#ux_link {
+	cursor: pointer;
 }
 /*------------------------SERVICES PAGE ENDS------------------------------*/
 

@@ -64,6 +64,10 @@ $(document).ready(function(){
 			window.open('http://www.trends.tagtheagency.com/')
 		})
 
+		$('#container').on('click', '#ux_link', function () {
+			window.open('http://www.uxnewzealand.com')
+		})
+
 	}
 
 	function loadHomePage () {
@@ -105,7 +109,6 @@ $(document).ready(function(){
 			homePage.displayThinkDoReviewSection($(e.target)[0].innerHTML.toLowerCase())			
 		})
 
-
 		homePage.addGrid('team_section')
 		homePage.addImage('team_section', 'left', 'imgs/team.png')
 		homePage.addText('team_section', 'right', 'The Team', 'The team at TAG is made up of a unique combination of talented individuals, each bringing depth and experience to the social media industry.')
@@ -117,8 +120,8 @@ $(document).ready(function(){
 
 		homePage.socialMediaWrapper()
 		homePage.socialMediaText('Specialists in Social Media')
-		homePage.socialMediaIcon('./imgs/twitter.svg', 'https://www.instagram.com/tagtheagency/')
-		homePage.socialMediaIcon('./imgs/insta.svg', 'https://twitter.com/TAGtheagency')
+		homePage.socialMediaIcon('./imgs/twitter.svg', 'https://twitter.com/TAGtheagency')
+		homePage.socialMediaIcon('./imgs/insta.svg', 'https://www.instagram.com/tagtheagency/')
 		homePage.socialMediaIcon('./imgs/facebook.svg', 'https://www.facebook.com/TAGtheagency/?fref=ts')
 
 	}
@@ -149,7 +152,7 @@ $(document).ready(function(){
 
 		homePage.addGrid('ux_section')
 		homePage.addImage('ux_section', 'right', 'http://www.uxnewzealand.com/img/uxnz-logo.png')
-		homePage.addText('ux_section', 'left', 'UX New Zealand', 'At the end of 2015 we had the privilege of working with the team at UX New Zealand at their annual conference. It was an amazing two-day event, which shared and showcased the best of usability from New Zealand and around the world. Our task was to create content for their social channels during and beyond the event. If UX is your thing, then this event is not to be missed! www.uxnewzealand.com')
+		homePage.addText('ux_section', 'left', 'UX New Zealand', 'At the end of 2015 we had the privilege of working with the team at UX New Zealand at their annual conference. It was an amazing two-day event, which shared and showcased the best of usability from New Zealand and around the world. Our task was to create content for their social channels during and beyond the event. If UX is your thing, then this event is not to be missed! <div id="ux_link">www.uxnewzealand.com</div>')
 		servicesPage.videoButton('ux_section', 'left', 'OsltYGFoZp4')
 
 		homePage.addGrid('pepsi_section')
