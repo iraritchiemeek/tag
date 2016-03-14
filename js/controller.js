@@ -7,6 +7,12 @@ $(document).ready(function(){
 	eventListeners()
 	checkPageHash()
 
+	function mobileStyles() {
+		if (jQuery.browser.mobile == true) {
+			console.log('WE ON A MOBILE')
+		}
+	}
+
 	function checkPageHash () {
 		var page = window.location.hash
 		if (page === '#services') {
