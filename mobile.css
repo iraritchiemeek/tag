@@ -16,7 +16,7 @@ html, body, #container, #content{
 #header {
 	z-index: 1;
 	position: fixed;
-	height: 100px;
+	height: 125px;
 	width: 100%;
 	top: 0%;
 	background-color: white;
@@ -41,7 +41,7 @@ html, body, #container, #content{
 #header_menu {
 	width: 100%;
 	position: absolute;
-	top: 15%;
+	top: 10%;
 	left: 50%;
 	padding: 1em;
 	overflow-y:auto;
@@ -153,34 +153,38 @@ html, body, #container, #content{
 }
 
 .homepage_2_grid {
-	float: left;
-	width: 50%;
+	position: absolute;
+	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+	left: 50%;
+	width: 75%;
 	height: 100%;
 	background-size: 75%;
-	background-position: center;
+	background-position: top;
 	background-repeat: no-repeat;
 }
 
 .homepage_text_section {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
 	left:50%;
+	top: 60%;
 	padding: 1em;
 	overflow-y:auto;
-	-webkit-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
 	display: inline-block;
 	position: relative;
-	top: 50%;
+	text-align: center;
 }
 
 .copy_title {
-	font-size: 3.2vw;
+	font-size: 4.2vw;
 	font-family: 'Harriet';
-	width: 100%;
+	display: inline-block;
 }
 
 .homepage_copy {
-	width: 70%;
-	font-size: 1.4vw;
+	font-size: 2.4vw;
 	font-family: 'Raleway',sans-serif; 
 }
 
@@ -193,7 +197,6 @@ html, body, #container, #content{
 	transform: translate(-50%,-50%);
 	position: relative;
 	top: 60%;
-	text-align: left;
 	margin-left: 20%;
 }
 
@@ -225,7 +228,6 @@ html, body, #container, #content{
 	display: none;
 	font-family: 'Raleway';
 	position: absolute !important;
-	text-align: left;
 	width: 75%;
 }
 
@@ -233,10 +235,10 @@ html, body, #container, #content{
 	background-size: 110% !important;
 }
 
-.left_section .homepage_text_section .homepage_copy, .left_section .homepage_text_section .copy_title {
+/*.left_section .homepage_text_section .homepage_copy, .left_section .homepage_text_section .copy_title {
 	float: right;
 	text-align: right;
-}
+}*/
 
 /*------------------------HOME PAGE ENDS-----------------------------*/
 
