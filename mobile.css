@@ -145,9 +145,10 @@ html, body, #container, #content{
 #social_media_text {
 	overflow: hidden;
 	left: 15%;
-	top: 25%;
-	display: inline-block;
+	top: 50%;
 	position: absolute;
+	transform: translate(0%, -50%);
+	-webkit-transform: translate(0%, -50%);
 	font-family: 'Harriet';
 	font-size: 3vw;
 }
@@ -159,8 +160,8 @@ html, body, #container, #content{
 	left: 50%;
 	width: 75%;
 	height: 100%;
-	background-size: 75%;
-	background-position: 50% 25%;
+	background-size: 70%;
+	background-position: 50% 20%;
 	background-repeat: no-repeat;
 }
 
@@ -169,12 +170,13 @@ html, body, #container, #content{
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
 	left:50%;
-	top: 65%;
+	top: 70%;
 	padding: 1em;
 	overflow-y:auto;
 	display: inline-block;
 	position: relative;
 	text-align: center;
+	z-index: 1;
 }
 
 .copy_title {
@@ -283,7 +285,7 @@ html, body, #container, #content{
 	border: 1px solid black;
 	width: 15%;
 	height: 1%;
-	top: 85%;
+	top: 90%;
 	left:50%;
 	border-radius: 3px;
 	position: relative;
@@ -349,7 +351,7 @@ html, body, #container, #content{
 	border: 1px solid black;
 	width: 15%;
 	height: 1%;
-	top: 85%;
+	top: 90%;
 	left:50%;
 	border-radius: 3px;
 	position: relative;
