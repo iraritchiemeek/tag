@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+	var self = this
 	var homePage = new HomePage()
 	var servicesPage = new ServicesPage(homePage)
 
@@ -74,6 +75,18 @@ $(document).ready(function(){
 			window.open('http://www.uxnewzealand.com')
 		})
 
+		$(window).on("orientationchange",function(){
+			loadStylesheet()
+		})
+
+	}
+
+	function loadStylesheet() {
+		if (jQuery.browser.mobile === true && window.orientation == 0) {
+			$('#dynamic_stylesheet_link').attr('href', 'mobile.css')
+		} else {
+			$('#dynamic_stylesheet_link').attr('href', 'style.css')
+		}
 	}
 
 	function loadHomePage () {

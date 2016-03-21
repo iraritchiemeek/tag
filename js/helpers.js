@@ -1,4 +1,4 @@
-var youtube_player
+var changeStylesheet
 
 function randomBetween (lowest, highest) {
 	return Math.floor((Math.random() * highest) + lowest)
