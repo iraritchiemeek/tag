@@ -362,6 +362,8 @@ html, body, #container, #content{
 	cursor: pointer;
 }
 /*------------------------SERVICES PAGE ENDS------------------------------*/
+/*------------------------------------------------------------------------*/
+/*---------------------------MOBILE BELOW---------------------------------*/
 
 
 @media only screen 
@@ -372,6 +374,14 @@ html, body, #container, #content{
   		font-family: 'Harriet';
   		src: url('fonts/Harriet Display Medium.otf');
   	}
+
+    #homepage_video {
+      display: none;
+    }
+
+    #tag_copy_section {
+      margin: 25% 0 0 0;
+    }
 
   	#header {
   		z-index: 1;
@@ -559,7 +569,9 @@ html, body, #container, #content{
   		-webkit-transform: translate(-50%,-50%);
   		transform: translate(-50%,-50%);
   		position: relative;
-  		top: 75%;
+  		top: 100%;
+      margin-left: 0;
+      text-align: center;
   	}
 
   	#TDR_title {
@@ -591,6 +603,7 @@ html, body, #container, #content{
   		font-family: 'Raleway';
   		position: absolute !important;
   		width: 100%;
+      text-align: center;
   	}
 
   	#team_section_left {
