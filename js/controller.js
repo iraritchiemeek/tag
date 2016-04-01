@@ -3,6 +3,7 @@ $(document).ready(function(){
 	var self = this
 	var homePage = new HomePage()
 	var servicesPage = new ServicesPage(homePage)
+	var virtualReality = new VirtualReality()
 
 	loadPageConstants()
 	eventListeners()
@@ -175,10 +176,20 @@ $(document).ready(function(){
 		$('#content').empty()
 		window.location.hash = 'virtual-reality';
 
-		homePage.setupSection('virtual_reality_section', 'homepage_double_grid')
+		homePage.setupSection('virtual_reality_360_header', 'homepage_double_grid virtual_reality_section')
+		virtualReality.append360Photo('virtual_reality_360_header', 'imgs/mtvic_360.jpg')
+		homePage.setupSection('virtual_reality_section', 'homepage_double_grid virtual_reality_section')
 		homePage.addGrid('virtual_reality_section')
 		homePage.addImage('virtual_reality_section', 'left', 'http://south.io/wp-content/uploads/2015/12/OculusRift.png')
 		homePage.addText('virtual_reality_section', 'right', 'VR Studios', 'Welcome to the VR Studio of TAG the agency. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</br></br>From Oculus Rift, to 360-degree video, to hologram technology; the VR Studio collaborates with the best and brightest in the industry to provide a complete solution for your brand in this new and innovative space of advertising</br></br>Get in touch today; we\'d love to help bring your brand to life, truly, from virtual to the real world!')
+		$('.valiantContainer').Valiant360({
+		        clickAndDrag: true,    // use click-and-drag camera controls
+		        // flatProjection: false,  // map image to appear flat (often more distorted)
+		        fov: 35,                // initial field of view
+		        fovMin: 3,              // min field of view allowed
+		        fovMax: 100,                // max field of view allowed
+		        hideControls: true,    // hide player controls
+		    });
 	}
 
 

@@ -361,6 +361,22 @@ html, body, #container, #content{
 #ux_link {
 	cursor: pointer;
 }
+
+.virtual_reality_section {
+  height: 75%;
+  width: 100%;
+  background-color: #eb55ae !important;
+  color: white;
+}
+
+#virtual_reality_360_header {
+  margin: 100px 0 0 0;
+  height: 50% !important;
+}
+
+.valiantContainer {
+  height: 100%;
+}
 /*------------------------SERVICES PAGE ENDS------------------------------*/
 /*------------------------------------------------------------------------*/
 /*---------------------------MOBILE BELOW---------------------------------*/
