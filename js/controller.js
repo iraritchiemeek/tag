@@ -179,16 +179,28 @@ $(document).ready(function(){
 		homePage.setupSection('virtual_reality_360_header', 'homepage_double_grid virtual_reality_section')
 		virtualReality.append360Photo('virtual_reality_360_header', 'imgs/mtvic_360.jpg')
 		homePage.setupSection('virtual_reality_section', 'homepage_double_grid virtual_reality_section')
+		homePage.setupSection('virtual_reality_video1', 'homepage_double_grid virtual_reality_section')
+		homePage.setupSection('tag_cardboard_section', 'homepage_double_grid virtual_reality_section')
+		homePage.setupSection('vr_contact_section', 'virtual_reality_section')
+		
 		homePage.addGrid('virtual_reality_section')
 		homePage.addImage('virtual_reality_section', 'left', 'http://south.io/wp-content/uploads/2015/12/OculusRift.png')
-		homePage.addText('virtual_reality_section', 'right', 'VR Studios', 'Welcome to the VR Studio of TAG the agency. This is a specific division of TAG that has been established to bring marketing and advertising to life through Virtual Reality.</br></br>From Oculus Rift, to 360-degree video, to hologram technology; the VR Studio collaborates with the best and brightest in the industry to provide a complete solution for your brand in this new and innovative space of advertising</br></br>Get in touch today; we\'d love to help bring your brand to life, truly, from virtual to the real world!')
+		homePage.addText('virtual_reality_section', 'right', 'VR Studios', 'Welcome to the VR Studio of TAG The Agency. This is a specific division of TAG that has been established to bring marketing and advertising to life through virtual reality.</br></br>TAG The Agency is driving innovation in the space of virtual reality and 360 video production. Why does a social media agency develop a specialty VRStudio? Simple. Video is the dominant story telling tool in social media. With our experience in this space combined with technology, and a passion for creative story telling, virtual reality is a natural fit.</br></br>Now especially as Facebook and YouTube both support 360 video, this innovation in video production is an exciting way to blow the minds of consumers and take your brand experience to the next level!</br></br>Curious about how we can work with you in the VR space? Drop us an email. Let\'s play!')
+		
+		homePage.addGrid('tag_cardboard_section')
+		homePage.addImage('tag_cardboard_section', 'left', 'http://www.suplugins.com/images/google-cardboard_sm.png')
+		homePage.addText('tag_cardboard_section', 'right', 'Strap Yourself In', 'VR goggles don\'t need to be an expensive high-end consumer product; they can be simple and cost effective. At TAG we have sourced our own branded goggles and have them here for you to purchase. At $30 a unit plus postage, it\'s a great way to experience the power and excitement of VR.</br></br>If you\'d like to develop your own branded VR goggles, get in touch. The team at TAG is here to help!')
+
+		virtualReality.addContactSection()
+
 		$('.valiantContainer').Valiant360({
 		        clickAndDrag: true,    // use click-and-drag camera controls
-		        // flatProjection: false,  // map image to appear flat (often more distorted)
-		        fov: 35,                // initial field of view
-		        fovMin: 3,              // min field of view allowed
-		        fovMax: 100,                // max field of view allowed
+		        fov: 50,                // initial field of view
+		        fovMin: 19,              // min field of view allowed
+		        fovMax: 21,                // max field of view allowed
 		        hideControls: true,    // hide player controls
+		        lat: 0,
+		        lon: 220
 		    });
 	}
 
